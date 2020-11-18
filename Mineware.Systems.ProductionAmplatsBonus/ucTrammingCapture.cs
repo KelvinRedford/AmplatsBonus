@@ -6787,7 +6787,7 @@ namespace Mineware.Systems.ProductionAmplatsBonus
 
             if (e.Column.AbsoluteIndex == 28)
             {
-                if (wd20clock.Substring(0, 1) == "S")
+                if (wd20clock.Substring(0, 1) == "S") ///Push
                 {
                     e.Graphics.DrawString(wd20clock, this.Font, Brushes.Red, e.Bounds.Left + 18, e.Bounds.Top + 2, StringFormat.GenericDefault);
                 }

@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BCS</RootNamespace>
+    <AssemblyName>BCS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v14.1, Version=14.1.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FastReport, Version=2014.1.2.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\FastReports\FastReport.Net\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2014.1.2.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\FastReports\FastReport.Net\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2014.1.2.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\FastReports\FastReport.Net\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Install, Version=1.0.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\FastReports\FastReport.Net\FastReport.Install.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Service, Version=2014.1.2.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\FastReports\FastReport.Net\FastReport.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.VSDesign, Version=1.0.0.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\FastReports\FastReport.Net\FastReport.VSDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Web, Version=2014.1.2.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\FastReports\FastReport.Net\FastReport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsDataAccess.cs" />
+    <Compile Include="clsUserInformation.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddActivity.Designer.cs">
+      <DependentUpon>frmAddActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddTramCrewcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTramCrewcs.Designer.cs">
+      <DependentUpon>frmAddTramCrewcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuditReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditReports.Designer.cs">
+      <DependentUpon>frmAuditReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseRateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseRateReport.Designer.cs">
+      <DependentUpon>frmBaseRateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCat2Capt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCat2Capt.Designer.cs">
+      <DependentUpon>frmCat2Capt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrewBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrewBonus.Designer.cs">
+      <DependentUpon>frmCrewBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEngBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEngBonus.Designer.cs">
+      <DependentUpon>FrmEngBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMinersBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMinersBonus.Designer.cs">
+      <DependentUpon>frmMinersBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMonthlySummariesRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonthlySummariesRep.Designer.cs">
+      <DependentUpon>frmMonthlySummariesRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductionProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductionProp.Designer.cs">
+      <DependentUpon>frmProductionProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProp.Designer.cs">
+      <DependentUpon>frmProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReports.Designer.cs">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSafetyNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSafetyNew.Designer.cs">
+      <DependentUpon>frmSafetyNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSBBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSBBonus.Designer.cs">
+      <DependentUpon>frmSBBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSBShifts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSBShifts.Designer.cs">
+      <DependentUpon>frmSBShifts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSysAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysAdmin.Designer.cs">
+      <DependentUpon>frmSysAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrammingBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrammingBonus.Designer.cs">
+      <DependentUpon>frmTrammingBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrammingProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrammingProp.Designer.cs">
+      <DependentUpon>frmTrammingProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalCls.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucGangMapping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGangMapping.Designer.cs">
+      <DependentUpon>ucGangMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProductionMinersCapture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProductionMinersCapture.Designer.cs">
+      <DependentUpon>ucProductionMinersCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSafetyCaptureNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSafetyCaptureNew.Designer.cs">
+      <DependentUpon>ucSafetyCaptureNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTrammingCapture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTrammingCapture.Designer.cs">
+      <DependentUpon>ucTrammingCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDataExtract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDataExtract.Designer.cs">
+      <DependentUpon>ucDataExtract.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTramCrewcs.resx">
+      <DependentUpon>frmAddTramCrewcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuditReports.resx">
+      <DependentUpon>frmAuditReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseRateReport.resx">
+      <DependentUpon>frmBaseRateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCat2Capt.resx">
+      <DependentUpon>frmCat2Capt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrewBonus.resx">
+      <DependentUpon>frmCrewBonus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEngBonus.resx">
+      <DependentUpon>FrmEngBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMinersBonus.resx">
+      <DependentUpon>frmMinersBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMonthlySummariesRep.resx">
+      <DependentUpon>frmMonthlySummariesRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductionProp.resx">
+      <DependentUpon>frmProductionProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProp.resx">
+      <DependentUpon>frmProp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReports.resx">
+      <DependentUpon>frmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSafetyNew.resx">
+      <DependentUpon>frmSafetyNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSBBonus.resx">
+      <DependentUpon>frmSBBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSBShifts.resx">
+      <DependentUpon>frmSBShifts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysAdmin.resx">
+      <DependentUpon>frmSysAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrammingBonus.resx">
+      <DependentUpon>frmTrammingBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrammingProp.resx">
+      <DependentUpon>frmTrammingProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ucGangMapping.resx">
+      <DependentUpon>ucGangMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProductionMinersCapture.resx">
+      <DependentUpon>ucProductionMinersCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSafetyCaptureNew.resx">
+      <DependentUpon>ucSafetyCaptureNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTrammingCapture.resx">
+      <DependentUpon>ucTrammingCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDataExtract.resx">
+      <DependentUpon>ucDataExtract.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinewareNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NorthamLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCS.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Immage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NorthamLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\northamLogonormall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Immage1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow-Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnLoadImageResorce.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

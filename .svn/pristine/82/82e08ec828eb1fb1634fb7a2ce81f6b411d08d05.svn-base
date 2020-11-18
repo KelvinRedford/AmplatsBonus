@@ -1,0 +1,1063 @@
+﻿namespace BCS
+{
+    partial class frmMain
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnSysset = new System.Windows.Forms.Button();
+            this.btnBcs = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.WelcomeLbl = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnSafety = new System.Windows.Forms.Button();
+            this.btnSysAdmin = new System.Windows.Forms.Button();
+            this.pnlCalculations = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnStpCrewBonus = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnStpSBBonus = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnTramCapt = new System.Windows.Forms.Button();
+            this.btnCat9Capt = new System.Windows.Forms.Button();
+            this.btnCat2Capt = new System.Windows.Forms.Button();
+            this.pnlShiftCapture = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pnlReports = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.btnBaseRateReport = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnSBShifts = new System.Windows.Forms.Button();
+            this.btnSBCrew = new System.Windows.Forms.Button();
+            this.btnSbYearly = new System.Windows.Forms.Button();
+            this.btnSbMonthly = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.pnlCalculations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.pnlShiftCapture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnlReports.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btnReports);
+            this.panel1.Controls.Add(this.btnSysset);
+            this.panel1.Controls.Add(this.btnBcs);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.WelcomeLbl);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1131, 112);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ImageKey = "Game Levels.bmp";
+            this.button5.Location = new System.Drawing.Point(820, 8);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(70, 30);
+            this.button5.TabIndex = 54;
+            this.button5.Text = "color";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
+            // 
+            // btnReports
+            // 
+            this.btnReports.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReports.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ImageKey = "Game Levels.bmp";
+            this.btnReports.Location = new System.Drawing.Point(566, 62);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(134, 45);
+            this.btnReports.TabIndex = 53;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            this.btnReports.Paint += new System.Windows.Forms.PaintEventHandler(this.btnReports_Paint);
+            // 
+            // btnSysset
+            // 
+            this.btnSysset.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSysset.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSysset.ImageKey = "Game Levels.bmp";
+            this.btnSysset.Location = new System.Drawing.Point(420, 62);
+            this.btnSysset.Name = "btnSysset";
+            this.btnSysset.Size = new System.Drawing.Size(134, 45);
+            this.btnSysset.TabIndex = 52;
+            this.btnSysset.Text = "Shift        Capture";
+            this.btnSysset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSysset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSysset.UseVisualStyleBackColor = false;
+            this.btnSysset.Click += new System.EventHandler(this.btnSysset_Click);
+            this.btnSysset.Paint += new System.Windows.Forms.PaintEventHandler(this.btnSysset_Paint);
+            // 
+            // btnBcs
+            // 
+            this.btnBcs.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBcs.Font = new System.Drawing.Font("Copperplate Gothic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBcs.ImageKey = "Game Levels.bmp";
+            this.btnBcs.Location = new System.Drawing.Point(275, 62);
+            this.btnBcs.Name = "btnBcs";
+            this.btnBcs.Size = new System.Drawing.Size(134, 45);
+            this.btnBcs.TabIndex = 51;
+            this.btnBcs.Text = "    Bonus Calcs";
+            this.btnBcs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBcs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBcs.UseVisualStyleBackColor = false;
+            this.btnBcs.Click += new System.EventHandler(this.btnBcs_Click);
+            this.btnBcs.Paint += new System.Windows.Forms.PaintEventHandler(this.ProdBtn_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::BCS.Properties.Resources.NorthamLogo;
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(11, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(229, 57);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 48;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.WaitOnLoad = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::BCS.Properties.Resources.MinewareNormal;
+            this.pictureBox1.Location = new System.Drawing.Point(980, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 99);
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
+            // WelcomeLbl
+            // 
+            this.WelcomeLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.WelcomeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeLbl.ForeColor = System.Drawing.Color.Red;
+            this.WelcomeLbl.Location = new System.Drawing.Point(21, 8);
+            this.WelcomeLbl.Name = "WelcomeLbl";
+            this.WelcomeLbl.Size = new System.Drawing.Size(1087, 30);
+            this.WelcomeLbl.TabIndex = 50;
+            this.WelcomeLbl.Text = "Welcome Dian to the Bonus Control System";
+            this.WelcomeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button10);
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnSafety);
+            this.panel2.Controls.Add(this.btnSysAdmin);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 112);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 686);
+            this.panel2.TabIndex = 1;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button10.Font = new System.Drawing.Font("Copperplate Gothic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ImageKey = "Game Levels.bmp";
+            this.button10.Location = new System.Drawing.Point(25, 321);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(138, 44);
+            this.button10.TabIndex = 70;
+            this.button10.Text = "BCS System Settings";
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button9.Font = new System.Drawing.Font("Copperplate Gothic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ImageKey = "Game Levels.bmp";
+            this.button9.Location = new System.Drawing.Point(25, 258);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(138, 44);
+            this.button9.TabIndex = 69;
+            this.button9.Text = "Old Bonus System";
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button2
+            // 
+            this.button2.AllowDrop = true;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageKey = "Game Levels.bmp";
+            this.button2.Location = new System.Drawing.Point(25, 402);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 40);
+            this.button2.TabIndex = 68;
+            this.button2.Text = "Log Off";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnSafety
+            // 
+            this.btnSafety.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnSafety.Font = new System.Drawing.Font("Copperplate Gothic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSafety.ImageKey = "Game Levels.bmp";
+            this.btnSafety.Location = new System.Drawing.Point(25, 33);
+            this.btnSafety.Name = "btnSafety";
+            this.btnSafety.Size = new System.Drawing.Size(138, 44);
+            this.btnSafety.TabIndex = 66;
+            this.btnSafety.Text = "Safety";
+            this.btnSafety.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnSafety.UseVisualStyleBackColor = false;
+            this.btnSafety.Click += new System.EventHandler(this.btnSafety_Click);
+            // 
+            // btnSysAdmin
+            // 
+            this.btnSysAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSysAdmin.Font = new System.Drawing.Font("Copperplate Gothic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSysAdmin.ImageKey = "Game Levels.bmp";
+            this.btnSysAdmin.Location = new System.Drawing.Point(25, 92);
+            this.btnSysAdmin.Name = "btnSysAdmin";
+            this.btnSysAdmin.Size = new System.Drawing.Size(138, 44);
+            this.btnSysAdmin.TabIndex = 67;
+            this.btnSysAdmin.Text = "System Admin";
+            this.btnSysAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSysAdmin.UseVisualStyleBackColor = false;
+            this.btnSysAdmin.Click += new System.EventHandler(this.btnSysAdmin_Click);
+            // 
+            // pnlCalculations
+            // 
+            this.pnlCalculations.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlCalculations.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pnlCalculations.Controls.Add(this.pictureBox3);
+            this.pnlCalculations.Controls.Add(this.label1);
+            this.pnlCalculations.Controls.Add(this.panel3);
+            this.pnlCalculations.Location = new System.Drawing.Point(218, 122);
+            this.pnlCalculations.Name = "pnlCalculations";
+            this.pnlCalculations.Size = new System.Drawing.Size(909, 566);
+            this.pnlCalculations.TabIndex = 2;
+            this.pnlCalculations.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = global::BCS.Properties.Resources.BCS1;
+            this.pictureBox3.Location = new System.Drawing.Point(368, 460);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(529, 97);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 14);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Production Bonus Calculations";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnStpCrewBonus);
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.btnStpSBBonus);
+            this.panel3.Location = new System.Drawing.Point(35, 34);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(222, 153);
+            this.panel3.TabIndex = 0;
+            // 
+            // btnStpCrewBonus
+            // 
+            this.btnStpCrewBonus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnStpCrewBonus.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStpCrewBonus.ImageKey = "Game Levels.bmp";
+            this.btnStpCrewBonus.Location = new System.Drawing.Point(16, 104);
+            this.btnStpCrewBonus.Name = "btnStpCrewBonus";
+            this.btnStpCrewBonus.Size = new System.Drawing.Size(183, 25);
+            this.btnStpCrewBonus.TabIndex = 33;
+            this.btnStpCrewBonus.Text = "Crew Bonus";
+            this.btnStpCrewBonus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStpCrewBonus.UseVisualStyleBackColor = false;
+            this.btnStpCrewBonus.Click += new System.EventHandler(this.btnStpCrewBonus_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button6.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ImageKey = "Game Levels.bmp";
+            this.button6.Location = new System.Drawing.Point(16, 61);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(183, 25);
+            this.button6.TabIndex = 32;
+            this.button6.Text = "Dev SB Bonus";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // btnStpSBBonus
+            // 
+            this.btnStpSBBonus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnStpSBBonus.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStpSBBonus.ImageKey = "Game Levels.bmp";
+            this.btnStpSBBonus.Location = new System.Drawing.Point(16, 21);
+            this.btnStpSBBonus.Name = "btnStpSBBonus";
+            this.btnStpSBBonus.Size = new System.Drawing.Size(183, 25);
+            this.btnStpSBBonus.TabIndex = 31;
+            this.btnStpSBBonus.Text = "STP SB Bonus";
+            this.btnStpSBBonus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStpSBBonus.UseVisualStyleBackColor = false;
+            this.btnStpSBBonus.Click += new System.EventHandler(this.btnStpSBBonus_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.button4);
+            this.panel6.Controls.Add(this.button3);
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.button20);
+            this.panel6.Controls.Add(this.button17);
+            this.panel6.Controls.Add(this.button7);
+            this.panel6.Controls.Add(this.button15);
+            this.panel6.Controls.Add(this.button16);
+            this.panel6.Location = new System.Drawing.Point(303, 34);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(455, 199);
+            this.panel6.TabIndex = 41;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.Enabled = false;
+            this.button4.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ImageKey = "Game Levels.bmp";
+            this.button4.Location = new System.Drawing.Point(238, 145);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(202, 36);
+            this.button4.TabIndex = 35;
+            this.button4.Text = "Engineering Detail";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button3.Enabled = false;
+            this.button3.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ImageKey = "Game Levels.bmp";
+            this.button3.Location = new System.Drawing.Point(238, 99);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(202, 36);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "Engineering Total";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageKey = "Game Levels.bmp";
+            this.button1.Location = new System.Drawing.Point(238, 55);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(202, 36);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "Top 5 Production Bonus";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button20.Enabled = false;
+            this.button20.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.ImageKey = "Game Levels.bmp";
+            this.button20.Location = new System.Drawing.Point(238, 12);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(202, 36);
+            this.button20.TabIndex = 32;
+            this.button20.Text = "Incentive and Other Bonuses";
+            this.button20.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button20.UseVisualStyleBackColor = false;
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button17.Enabled = false;
+            this.button17.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ImageKey = "Game Levels.bmp";
+            this.button17.Location = new System.Drawing.Point(19, 99);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(202, 36);
+            this.button17.TabIndex = 31;
+            this.button17.Text = "Production Summaries Total Mine";
+            this.button17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button17.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button7.Enabled = false;
+            this.button7.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ImageKey = "Game Levels.bmp";
+            this.button7.Location = new System.Drawing.Point(19, 145);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(202, 36);
+            this.button7.TabIndex = 30;
+            this.button7.Text = "Production Summries Per Section";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button15.Enabled = false;
+            this.button15.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ImageKey = "Game Levels.bmp";
+            this.button15.Location = new System.Drawing.Point(19, 55);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(202, 36);
+            this.button15.TabIndex = 29;
+            this.button15.Text = "Monthly Detail Summaries";
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button16.Enabled = false;
+            this.button16.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ImageKey = "Game Levels.bmp";
+            this.button16.Location = new System.Drawing.Point(19, 12);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(202, 36);
+            this.button16.TabIndex = 28;
+            this.button16.Text = "Monthly Summaries";
+            this.button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(300, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 14);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Summary Reports";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 14);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Shift Capture";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btnTramCapt);
+            this.panel4.Controls.Add(this.btnCat9Capt);
+            this.panel4.Controls.Add(this.btnCat2Capt);
+            this.panel4.Location = new System.Drawing.Point(32, 34);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 141);
+            this.panel4.TabIndex = 33;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // btnTramCapt
+            // 
+            this.btnTramCapt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnTramCapt.Enabled = false;
+            this.btnTramCapt.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTramCapt.ImageKey = "Game Levels.bmp";
+            this.btnTramCapt.Location = new System.Drawing.Point(7, 95);
+            this.btnTramCapt.Name = "btnTramCapt";
+            this.btnTramCapt.Size = new System.Drawing.Size(183, 25);
+            this.btnTramCapt.TabIndex = 30;
+            this.btnTramCapt.Text = "Tramming";
+            this.btnTramCapt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTramCapt.UseVisualStyleBackColor = false;
+            // 
+            // btnCat9Capt
+            // 
+            this.btnCat9Capt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCat9Capt.Enabled = false;
+            this.btnCat9Capt.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCat9Capt.ImageKey = "Game Levels.bmp";
+            this.btnCat9Capt.Location = new System.Drawing.Point(7, 55);
+            this.btnCat9Capt.Name = "btnCat9Capt";
+            this.btnCat9Capt.Size = new System.Drawing.Size(183, 25);
+            this.btnCat9Capt.TabIndex = 29;
+            this.btnCat9Capt.Text = "Cat 9 to 13";
+            this.btnCat9Capt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCat9Capt.UseVisualStyleBackColor = false;
+            // 
+            // btnCat2Capt
+            // 
+            this.btnCat2Capt.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCat2Capt.Enabled = false;
+            this.btnCat2Capt.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCat2Capt.ImageKey = "Game Levels.bmp";
+            this.btnCat2Capt.Location = new System.Drawing.Point(7, 15);
+            this.btnCat2Capt.Name = "btnCat2Capt";
+            this.btnCat2Capt.Size = new System.Drawing.Size(183, 25);
+            this.btnCat2Capt.TabIndex = 28;
+            this.btnCat2Capt.Text = "Cat 2 to 8";
+            this.btnCat2Capt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCat2Capt.UseVisualStyleBackColor = false;
+            this.btnCat2Capt.Click += new System.EventHandler(this.btnCat2Capt_Click);
+            // 
+            // pnlShiftCapture
+            // 
+            this.pnlShiftCapture.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlShiftCapture.Controls.Add(this.pictureBox4);
+            this.pnlShiftCapture.Controls.Add(this.label2);
+            this.pnlShiftCapture.Controls.Add(this.panel4);
+            this.pnlShiftCapture.Location = new System.Drawing.Point(1091, 122);
+            this.pnlShiftCapture.Name = "pnlShiftCapture";
+            this.pnlShiftCapture.Size = new System.Drawing.Size(40, 84);
+            this.pnlShiftCapture.TabIndex = 3;
+            this.pnlShiftCapture.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::BCS.Properties.Resources.BCS1;
+            this.pictureBox4.Location = new System.Drawing.Point(-500, -24);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(529, 97);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 36;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pnlReports
+            // 
+            this.pnlReports.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlReports.Controls.Add(this.panel7);
+            this.pnlReports.Controls.Add(this.label5);
+            this.pnlReports.Controls.Add(this.label3);
+            this.pnlReports.Controls.Add(this.panel5);
+            this.pnlReports.Controls.Add(this.panel6);
+            this.pnlReports.Controls.Add(this.pictureBox5);
+            this.pnlReports.Controls.Add(this.label6);
+            this.pnlReports.Controls.Add(this.panel9);
+            this.pnlReports.Controls.Add(this.label4);
+            this.pnlReports.Location = new System.Drawing.Point(952, 753);
+            this.pnlReports.Name = "pnlReports";
+            this.pnlReports.Size = new System.Drawing.Size(157, 33);
+            this.pnlReports.TabIndex = 4;
+            this.pnlReports.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.button14);
+            this.panel7.Controls.Add(this.button18);
+            this.panel7.Controls.Add(this.button19);
+            this.panel7.Controls.Add(this.button21);
+            this.panel7.Controls.Add(this.button22);
+            this.panel7.Controls.Add(this.button23);
+            this.panel7.Controls.Add(this.button24);
+            this.panel7.Controls.Add(this.button25);
+            this.panel7.Location = new System.Drawing.Point(303, 270);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(455, 199);
+            this.panel7.TabIndex = 45;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button14.Enabled = false;
+            this.button14.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ImageKey = "Game Levels.bmp";
+            this.button14.Location = new System.Drawing.Point(238, 145);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(202, 36);
+            this.button14.TabIndex = 35;
+            this.button14.Text = "Daily Adjustments";
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button18.Enabled = false;
+            this.button18.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ImageKey = "Game Levels.bmp";
+            this.button18.Location = new System.Drawing.Point(238, 99);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(202, 36);
+            this.button18.TabIndex = 34;
+            this.button18.Text = "Gangs Late Changes";
+            this.button18.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button18.UseVisualStyleBackColor = false;
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button19.Enabled = false;
+            this.button19.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.ImageKey = "Game Levels.bmp";
+            this.button19.Location = new System.Drawing.Point(238, 55);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(202, 36);
+            this.button19.TabIndex = 33;
+            this.button19.Text = "Gangs Removed";
+            this.button19.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button19.UseVisualStyleBackColor = false;
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button21.Enabled = false;
+            this.button21.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.ImageKey = "Game Levels.bmp";
+            this.button21.Location = new System.Drawing.Point(238, 12);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(202, 36);
+            this.button21.TabIndex = 32;
+            this.button21.Text = "Production";
+            this.button21.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button21.UseVisualStyleBackColor = false;
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button22.Enabled = false;
+            this.button22.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.ImageKey = "Game Levels.bmp";
+            this.button22.Location = new System.Drawing.Point(19, 99);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(202, 36);
+            this.button22.TabIndex = 31;
+            this.button22.Text = "Engineering TSD Vent";
+            this.button22.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button22.UseVisualStyleBackColor = false;
+            // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button23.Enabled = false;
+            this.button23.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.ImageKey = "Game Levels.bmp";
+            this.button23.Location = new System.Drawing.Point(19, 145);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(202, 36);
+            this.button23.TabIndex = 30;
+            this.button23.Text = "Engineering Shafts";
+            this.button23.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button23.UseVisualStyleBackColor = false;
+            // 
+            // button24
+            // 
+            this.button24.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button24.Enabled = false;
+            this.button24.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.ImageKey = "Game Levels.bmp";
+            this.button24.Location = new System.Drawing.Point(19, 55);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(202, 36);
+            this.button24.TabIndex = 29;
+            this.button24.Text = "Engineering Workshops";
+            this.button24.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button24.UseVisualStyleBackColor = false;
+            // 
+            // button25
+            // 
+            this.button25.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button25.Enabled = false;
+            this.button25.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button25.ImageKey = "Game Levels.bmp";
+            this.button25.Location = new System.Drawing.Point(19, 12);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(202, 36);
+            this.button25.TabIndex = 28;
+            this.button25.Text = "Engineering Production";
+            this.button25.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button25.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(300, 253);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 14);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Audit Reports";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(29, 254);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 14);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Other Reports";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.button8);
+            this.panel5.Controls.Add(this.button11);
+            this.panel5.Controls.Add(this.button12);
+            this.panel5.Controls.Add(this.btnBaseRateReport);
+            this.panel5.Location = new System.Drawing.Point(32, 270);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(222, 199);
+            this.panel5.TabIndex = 42;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button8.Enabled = false;
+            this.button8.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ImageKey = "Game Levels.bmp";
+            this.button8.Location = new System.Drawing.Point(7, 55);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(202, 36);
+            this.button8.TabIndex = 36;
+            this.button8.Text = "Production Unit Results";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button11.Enabled = false;
+            this.button11.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ImageKey = "Game Levels.bmp";
+            this.button11.Location = new System.Drawing.Point(7, 12);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(202, 36);
+            this.button11.TabIndex = 35;
+            this.button11.Text = "Shift Capture Analysis";
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button12.Enabled = false;
+            this.button12.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ImageKey = "Game Levels.bmp";
+            this.button12.Location = new System.Drawing.Point(7, 99);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(202, 36);
+            this.button12.TabIndex = 31;
+            this.button12.Text = "Crew Payment Report";
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // btnBaseRateReport
+            // 
+            this.btnBaseRateReport.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBaseRateReport.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaseRateReport.ImageKey = "Game Levels.bmp";
+            this.btnBaseRateReport.Location = new System.Drawing.Point(7, 145);
+            this.btnBaseRateReport.Name = "btnBaseRateReport";
+            this.btnBaseRateReport.Size = new System.Drawing.Size(202, 36);
+            this.btnBaseRateReport.TabIndex = 30;
+            this.btnBaseRateReport.Text = "Base Rate Calculation Report";
+            this.btnBaseRateReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBaseRateReport.UseVisualStyleBackColor = false;
+            this.btnBaseRateReport.Click += new System.EventHandler(this.btnBaseRateReport_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = global::BCS.Properties.Resources.BCS1;
+            this.pictureBox5.Location = new System.Drawing.Point(-383, -75);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(529, 97);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 36;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Copperplate Gothic Light", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(29, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(194, 14);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Shift Boss Bonus Reports";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.btnSBShifts);
+            this.panel9.Controls.Add(this.btnSBCrew);
+            this.panel9.Controls.Add(this.btnSbYearly);
+            this.panel9.Controls.Add(this.btnSbMonthly);
+            this.panel9.Location = new System.Drawing.Point(32, 34);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(222, 199);
+            this.panel9.TabIndex = 33;
+            // 
+            // btnSBShifts
+            // 
+            this.btnSBShifts.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSBShifts.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSBShifts.ImageKey = "Game Levels.bmp";
+            this.btnSBShifts.Location = new System.Drawing.Point(7, 55);
+            this.btnSBShifts.Name = "btnSBShifts";
+            this.btnSBShifts.Size = new System.Drawing.Size(202, 36);
+            this.btnSBShifts.TabIndex = 36;
+            this.btnSBShifts.Text = "SB Shift Sheets";
+            this.btnSBShifts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSBShifts.UseVisualStyleBackColor = false;
+            this.btnSBShifts.Click += new System.EventHandler(this.btnSBShifts_Click);
+            // 
+            // btnSBCrew
+            // 
+            this.btnSBCrew.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSBCrew.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSBCrew.ImageKey = "Game Levels.bmp";
+            this.btnSBCrew.Location = new System.Drawing.Point(7, 12);
+            this.btnSBCrew.Name = "btnSBCrew";
+            this.btnSBCrew.Size = new System.Drawing.Size(202, 36);
+            this.btnSBCrew.TabIndex = 35;
+            this.btnSBCrew.Text = "SB Crew Achievements";
+            this.btnSBCrew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSBCrew.UseVisualStyleBackColor = false;
+            this.btnSBCrew.Click += new System.EventHandler(this.btnSBCrew_Click);
+            // 
+            // btnSbYearly
+            // 
+            this.btnSbYearly.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSbYearly.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSbYearly.ImageKey = "Game Levels.bmp";
+            this.btnSbYearly.Location = new System.Drawing.Point(7, 145);
+            this.btnSbYearly.Name = "btnSbYearly";
+            this.btnSbYearly.Size = new System.Drawing.Size(202, 36);
+            this.btnSbYearly.TabIndex = 31;
+            this.btnSbYearly.Text = "SB Yeearly Report";
+            this.btnSbYearly.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSbYearly.UseVisualStyleBackColor = false;
+            this.btnSbYearly.Click += new System.EventHandler(this.btnSbYearly_Click);
+            // 
+            // btnSbMonthly
+            // 
+            this.btnSbMonthly.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSbMonthly.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSbMonthly.ImageKey = "Game Levels.bmp";
+            this.btnSbMonthly.Location = new System.Drawing.Point(7, 99);
+            this.btnSbMonthly.Name = "btnSbMonthly";
+            this.btnSbMonthly.Size = new System.Drawing.Size(202, 36);
+            this.btnSbMonthly.TabIndex = 30;
+            this.btnSbMonthly.Text = "SB Monthly Report";
+            this.btnSbMonthly.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSbMonthly.UseVisualStyleBackColor = false;
+            this.btnSbMonthly.Click += new System.EventHandler(this.btnSbMonthly_Click);
+            // 
+            // frmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1131, 798);
+            this.Controls.Add(this.pnlReports);
+            this.Controls.Add(this.pnlShiftCapture);
+            this.Controls.Add(this.pnlCalculations);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmMain";
+            this.Text = "Bonus Control System";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.Load += new System.EventHandler(this.frmMain_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.pnlCalculations.ResumeLayout(false);
+            this.pnlCalculations.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.pnlShiftCapture.ResumeLayout(false);
+            this.pnlShiftCapture.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnlReports.ResumeLayout(false);
+            this.pnlReports.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label WelcomeLbl;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button btnSafety;
+        public System.Windows.Forms.Button btnSysAdmin;
+        private System.Windows.Forms.Panel pnlCalculations;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnStpSBBonus;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnTramCapt;
+        private System.Windows.Forms.Button btnCat9Capt;
+        private System.Windows.Forms.Button btnCat2Capt;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Button btnSysset;
+        public System.Windows.Forms.Button btnBcs;
+        public System.Windows.Forms.Button btnReports;
+        public System.Windows.Forms.Button button10;
+        public System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Panel pnlShiftCapture;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel pnlReports;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnSbMonthly;
+        private System.Windows.Forms.Button btnSbYearly;
+        private System.Windows.Forms.Button btnSBShifts;
+        private System.Windows.Forms.Button btnSBCrew;
+        public System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnBaseRateReport;
+        private System.Windows.Forms.Button btnStpCrewBonus;
+    }
+}
+

@@ -1,0 +1,800 @@
+﻿namespace BCS
+{
+    partial class frmStpCrewBonus
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.DevTypeLbl = new System.Windows.Forms.Label();
+            this.NSFatalLbl = new System.Windows.Forms.Label();
+            this.NSLtiSafeLbl = new System.Windows.Forms.Label();
+            this.NSRiLbl = new System.Windows.Forms.Label();
+            this.DSFatalLbl = new System.Windows.Forms.Label();
+            this.DSLtiSafeLbl = new System.Windows.Forms.Label();
+            this.DSRiLbl = new System.Windows.Forms.Label();
+            this.NSLTILbl = new System.Windows.Forms.Label();
+            this.DSLTILbl = new System.Windows.Forms.Label();
+            this.IncentiveSweepsLbl = new System.Windows.Forms.Label();
+            this.TotalSweepsLbl = new System.Windows.Forms.Label();
+            this.AbscentBonusLbl = new System.Windows.Forms.Label();
+            this.DrillOpBonusLbl = new System.Windows.Forms.Label();
+            this.TeamLeaderBonusLbl = new System.Windows.Forms.Label();
+            this.MerBonusLbl = new System.Windows.Forms.Label();
+            this.TotalWPSqmLbl = new System.Windows.Forms.Label();
+            this.IncentiveSqmLbl = new System.Windows.Forms.Label();
+            this.PosShiftsLbl = new System.Windows.Forms.Label();
+            this.AvgEmpLbl = new System.Windows.Forms.Label();
+            this.ReefTypelbl = new System.Windows.Forms.Label();
+            this.EndDate = new System.Windows.Forms.DateTimePicker();
+            this.StartDate = new System.Windows.Forms.DateTimePicker();
+            this.AdjLbl = new System.Windows.Forms.Label();
+            this.Sectionlbl = new System.Windows.Forms.Label();
+            this.NSLbl = new System.Windows.Forms.Label();
+            this.DsLbl = new System.Windows.Forms.Label();
+            this.lblOrgunit = new System.Windows.Forms.Label();
+            this.showBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.Close1Btn = new DevExpress.XtraEditors.SimpleButton();
+            this.lbTransfer = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbPrinted = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbIncomplete = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbDevConCrew = new System.Windows.Forms.RadioButton();
+            this.rdbDevCleanCrew = new System.Windows.Forms.RadioButton();
+            this.rdbDevTransCrew = new System.Windows.Forms.RadioButton();
+            this.rdbDevRailCrew = new System.Windows.Forms.RadioButton();
+            this.rdbDev = new System.Windows.Forms.RadioButton();
+            this.rdbXCCrew = new System.Windows.Forms.RadioButton();
+            this.rdbConstCrew = new System.Windows.Forms.RadioButton();
+            this.rdbZCrew = new System.Windows.Forms.RadioButton();
+            this.rdbRCrew = new System.Windows.Forms.RadioButton();
+            this.rdbStoping = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ProdMonthTxt = new System.Windows.Forms.NumericUpDown();
+            this.ProdMonth1Txt = new System.Windows.Forms.TextBox();
+            this.CrewGrid1 = new System.Windows.Forms.DataGridView();
+            this.WPGrid = new System.Windows.Forms.DataGridView();
+            this.pcReport = new FastReport.Preview.PreviewControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdMonthTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CrewGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WPGrid)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.simpleButton1);
+            this.panel1.Controls.Add(this.DevTypeLbl);
+            this.panel1.Controls.Add(this.NSFatalLbl);
+            this.panel1.Controls.Add(this.NSLtiSafeLbl);
+            this.panel1.Controls.Add(this.NSRiLbl);
+            this.panel1.Controls.Add(this.DSFatalLbl);
+            this.panel1.Controls.Add(this.DSLtiSafeLbl);
+            this.panel1.Controls.Add(this.DSRiLbl);
+            this.panel1.Controls.Add(this.NSLTILbl);
+            this.panel1.Controls.Add(this.DSLTILbl);
+            this.panel1.Controls.Add(this.IncentiveSweepsLbl);
+            this.panel1.Controls.Add(this.TotalSweepsLbl);
+            this.panel1.Controls.Add(this.AbscentBonusLbl);
+            this.panel1.Controls.Add(this.DrillOpBonusLbl);
+            this.panel1.Controls.Add(this.TeamLeaderBonusLbl);
+            this.panel1.Controls.Add(this.MerBonusLbl);
+            this.panel1.Controls.Add(this.TotalWPSqmLbl);
+            this.panel1.Controls.Add(this.IncentiveSqmLbl);
+            this.panel1.Controls.Add(this.PosShiftsLbl);
+            this.panel1.Controls.Add(this.AvgEmpLbl);
+            this.panel1.Controls.Add(this.ReefTypelbl);
+            this.panel1.Controls.Add(this.EndDate);
+            this.panel1.Controls.Add(this.StartDate);
+            this.panel1.Controls.Add(this.AdjLbl);
+            this.panel1.Controls.Add(this.Sectionlbl);
+            this.panel1.Controls.Add(this.NSLbl);
+            this.panel1.Controls.Add(this.DsLbl);
+            this.panel1.Controls.Add(this.lblOrgunit);
+            this.panel1.Controls.Add(this.showBtn);
+            this.panel1.Controls.Add(this.Close1Btn);
+            this.panel1.Controls.Add(this.lbTransfer);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lbPrinted);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lbIncomplete);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.ProdMonthTxt);
+            this.panel1.Controls.Add(this.ProdMonth1Txt);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1263, 263);
+            this.panel1.TabIndex = 0;
+            // 
+            // DevTypeLbl
+            // 
+            this.DevTypeLbl.AutoSize = true;
+            this.DevTypeLbl.Location = new System.Drawing.Point(1039, 55);
+            this.DevTypeLbl.Name = "DevTypeLbl";
+            this.DevTypeLbl.Size = new System.Drawing.Size(51, 13);
+            this.DevTypeLbl.TabIndex = 134;
+            this.DevTypeLbl.Text = "DevType";
+            this.DevTypeLbl.Visible = false;
+            // 
+            // NSFatalLbl
+            // 
+            this.NSFatalLbl.AutoSize = true;
+            this.NSFatalLbl.Location = new System.Drawing.Point(1137, 28);
+            this.NSFatalLbl.Name = "NSFatalLbl";
+            this.NSFatalLbl.Size = new System.Drawing.Size(13, 13);
+            this.NSFatalLbl.TabIndex = 133;
+            this.NSFatalLbl.Text = "0";
+            this.NSFatalLbl.Visible = false;
+            // 
+            // NSLtiSafeLbl
+            // 
+            this.NSLtiSafeLbl.AutoSize = true;
+            this.NSLtiSafeLbl.Location = new System.Drawing.Point(1109, 28);
+            this.NSLtiSafeLbl.Name = "NSLtiSafeLbl";
+            this.NSLtiSafeLbl.Size = new System.Drawing.Size(13, 13);
+            this.NSLtiSafeLbl.TabIndex = 132;
+            this.NSLtiSafeLbl.Text = "0";
+            this.NSLtiSafeLbl.Visible = false;
+            // 
+            // NSRiLbl
+            // 
+            this.NSRiLbl.AutoSize = true;
+            this.NSRiLbl.Location = new System.Drawing.Point(1080, 28);
+            this.NSRiLbl.Name = "NSRiLbl";
+            this.NSRiLbl.Size = new System.Drawing.Size(13, 13);
+            this.NSRiLbl.TabIndex = 131;
+            this.NSRiLbl.Text = "0";
+            this.NSRiLbl.Visible = false;
+            // 
+            // DSFatalLbl
+            // 
+            this.DSFatalLbl.AutoSize = true;
+            this.DSFatalLbl.Location = new System.Drawing.Point(1137, 8);
+            this.DSFatalLbl.Name = "DSFatalLbl";
+            this.DSFatalLbl.Size = new System.Drawing.Size(13, 13);
+            this.DSFatalLbl.TabIndex = 130;
+            this.DSFatalLbl.Text = "0";
+            this.DSFatalLbl.Visible = false;
+            // 
+            // DSLtiSafeLbl
+            // 
+            this.DSLtiSafeLbl.AutoSize = true;
+            this.DSLtiSafeLbl.Location = new System.Drawing.Point(1109, 8);
+            this.DSLtiSafeLbl.Name = "DSLtiSafeLbl";
+            this.DSLtiSafeLbl.Size = new System.Drawing.Size(13, 13);
+            this.DSLtiSafeLbl.TabIndex = 129;
+            this.DSLtiSafeLbl.Text = "0";
+            this.DSLtiSafeLbl.Visible = false;
+            // 
+            // DSRiLbl
+            // 
+            this.DSRiLbl.AutoSize = true;
+            this.DSRiLbl.Location = new System.Drawing.Point(1080, 8);
+            this.DSRiLbl.Name = "DSRiLbl";
+            this.DSRiLbl.Size = new System.Drawing.Size(13, 13);
+            this.DSRiLbl.TabIndex = 128;
+            this.DSRiLbl.Text = "0";
+            this.DSRiLbl.Visible = false;
+            // 
+            // NSLTILbl
+            // 
+            this.NSLTILbl.AutoSize = true;
+            this.NSLTILbl.Location = new System.Drawing.Point(594, 13);
+            this.NSLTILbl.Name = "NSLTILbl";
+            this.NSLTILbl.Size = new System.Drawing.Size(13, 13);
+            this.NSLTILbl.TabIndex = 127;
+            this.NSLTILbl.Text = "0";
+            this.NSLTILbl.Visible = false;
+            // 
+            // DSLTILbl
+            // 
+            this.DSLTILbl.AutoSize = true;
+            this.DSLTILbl.Location = new System.Drawing.Point(543, 11);
+            this.DSLTILbl.Name = "DSLTILbl";
+            this.DSLTILbl.Size = new System.Drawing.Size(13, 13);
+            this.DSLTILbl.TabIndex = 126;
+            this.DSLTILbl.Text = "0";
+            this.DSLTILbl.Visible = false;
+            // 
+            // IncentiveSweepsLbl
+            // 
+            this.IncentiveSweepsLbl.AutoSize = true;
+            this.IncentiveSweepsLbl.Location = new System.Drawing.Point(1068, 153);
+            this.IncentiveSweepsLbl.Name = "IncentiveSweepsLbl";
+            this.IncentiveSweepsLbl.Size = new System.Drawing.Size(89, 13);
+            this.IncentiveSweepsLbl.TabIndex = 125;
+            this.IncentiveSweepsLbl.Text = "IncentiveSweeps";
+            this.IncentiveSweepsLbl.Visible = false;
+            // 
+            // TotalSweepsLbl
+            // 
+            this.TotalSweepsLbl.AutoSize = true;
+            this.TotalSweepsLbl.Location = new System.Drawing.Point(1165, 141);
+            this.TotalSweepsLbl.Name = "TotalSweepsLbl";
+            this.TotalSweepsLbl.Size = new System.Drawing.Size(13, 13);
+            this.TotalSweepsLbl.TabIndex = 124;
+            this.TotalSweepsLbl.Text = "0";
+            this.TotalSweepsLbl.Visible = false;
+            // 
+            // AbscentBonusLbl
+            // 
+            this.AbscentBonusLbl.AutoSize = true;
+            this.AbscentBonusLbl.Location = new System.Drawing.Point(1137, 113);
+            this.AbscentBonusLbl.Name = "AbscentBonusLbl";
+            this.AbscentBonusLbl.Size = new System.Drawing.Size(13, 13);
+            this.AbscentBonusLbl.TabIndex = 123;
+            this.AbscentBonusLbl.Text = "0";
+            this.AbscentBonusLbl.Visible = false;
+            // 
+            // DrillOpBonusLbl
+            // 
+            this.DrillOpBonusLbl.AutoSize = true;
+            this.DrillOpBonusLbl.Location = new System.Drawing.Point(1137, 100);
+            this.DrillOpBonusLbl.Name = "DrillOpBonusLbl";
+            this.DrillOpBonusLbl.Size = new System.Drawing.Size(13, 13);
+            this.DrillOpBonusLbl.TabIndex = 122;
+            this.DrillOpBonusLbl.Text = "0";
+            this.DrillOpBonusLbl.Visible = false;
+            // 
+            // TeamLeaderBonusLbl
+            // 
+            this.TeamLeaderBonusLbl.AutoSize = true;
+            this.TeamLeaderBonusLbl.Location = new System.Drawing.Point(1137, 75);
+            this.TeamLeaderBonusLbl.Name = "TeamLeaderBonusLbl";
+            this.TeamLeaderBonusLbl.Size = new System.Drawing.Size(13, 13);
+            this.TeamLeaderBonusLbl.TabIndex = 121;
+            this.TeamLeaderBonusLbl.Text = "0";
+            this.TeamLeaderBonusLbl.Visible = false;
+            // 
+            // MerBonusLbl
+            // 
+            this.MerBonusLbl.AutoSize = true;
+            this.MerBonusLbl.Location = new System.Drawing.Point(1137, 55);
+            this.MerBonusLbl.Name = "MerBonusLbl";
+            this.MerBonusLbl.Size = new System.Drawing.Size(13, 13);
+            this.MerBonusLbl.TabIndex = 120;
+            this.MerBonusLbl.Text = "0";
+            this.MerBonusLbl.Visible = false;
+            // 
+            // TotalWPSqmLbl
+            // 
+            this.TotalWPSqmLbl.AutoSize = true;
+            this.TotalWPSqmLbl.Location = new System.Drawing.Point(1146, 141);
+            this.TotalWPSqmLbl.Name = "TotalWPSqmLbl";
+            this.TotalWPSqmLbl.Size = new System.Drawing.Size(13, 13);
+            this.TotalWPSqmLbl.TabIndex = 119;
+            this.TotalWPSqmLbl.Text = "0";
+            this.TotalWPSqmLbl.Visible = false;
+            // 
+            // IncentiveSqmLbl
+            // 
+            this.IncentiveSqmLbl.AutoSize = true;
+            this.IncentiveSqmLbl.Location = new System.Drawing.Point(1068, 140);
+            this.IncentiveSqmLbl.Name = "IncentiveSqmLbl";
+            this.IncentiveSqmLbl.Size = new System.Drawing.Size(72, 13);
+            this.IncentiveSqmLbl.TabIndex = 118;
+            this.IncentiveSqmLbl.Text = "IncentiveSqm";
+            this.IncentiveSqmLbl.Visible = false;
+            // 
+            // PosShiftsLbl
+            // 
+            this.PosShiftsLbl.AutoSize = true;
+            this.PosShiftsLbl.Location = new System.Drawing.Point(1000, 141);
+            this.PosShiftsLbl.Name = "PosShiftsLbl";
+            this.PosShiftsLbl.Size = new System.Drawing.Size(51, 13);
+            this.PosShiftsLbl.TabIndex = 117;
+            this.PosShiftsLbl.Text = "PosShifts";
+            this.PosShiftsLbl.Visible = false;
+            // 
+            // AvgEmpLbl
+            // 
+            this.AvgEmpLbl.AutoSize = true;
+            this.AvgEmpLbl.Location = new System.Drawing.Point(947, 140);
+            this.AvgEmpLbl.Name = "AvgEmpLbl";
+            this.AvgEmpLbl.Size = new System.Drawing.Size(47, 13);
+            this.AvgEmpLbl.TabIndex = 116;
+            this.AvgEmpLbl.Text = "AvgEmp";
+            this.AvgEmpLbl.Visible = false;
+            // 
+            // ReefTypelbl
+            // 
+            this.ReefTypelbl.AutoSize = true;
+            this.ReefTypelbl.Location = new System.Drawing.Point(963, 54);
+            this.ReefTypelbl.Name = "ReefTypelbl";
+            this.ReefTypelbl.Size = new System.Drawing.Size(54, 13);
+            this.ReefTypelbl.TabIndex = 115;
+            this.ReefTypelbl.Text = "ReefType";
+            this.ReefTypelbl.Visible = false;
+            // 
+            // EndDate
+            // 
+            this.EndDate.Location = new System.Drawing.Point(825, 130);
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Size = new System.Drawing.Size(101, 20);
+            this.EndDate.TabIndex = 114;
+            this.EndDate.Visible = false;
+            // 
+            // StartDate
+            // 
+            this.StartDate.Location = new System.Drawing.Point(718, 130);
+            this.StartDate.Name = "StartDate";
+            this.StartDate.Size = new System.Drawing.Size(101, 20);
+            this.StartDate.TabIndex = 113;
+            this.StartDate.Visible = false;
+            // 
+            // AdjLbl
+            // 
+            this.AdjLbl.AutoSize = true;
+            this.AdjLbl.Location = new System.Drawing.Point(835, 54);
+            this.AdjLbl.Name = "AdjLbl";
+            this.AdjLbl.Size = new System.Drawing.Size(22, 13);
+            this.AdjLbl.TabIndex = 112;
+            this.AdjLbl.Text = "Adj";
+            this.AdjLbl.Visible = false;
+            // 
+            // Sectionlbl
+            // 
+            this.Sectionlbl.AutoSize = true;
+            this.Sectionlbl.Location = new System.Drawing.Point(757, 54);
+            this.Sectionlbl.Name = "Sectionlbl";
+            this.Sectionlbl.Size = new System.Drawing.Size(43, 13);
+            this.Sectionlbl.TabIndex = 111;
+            this.Sectionlbl.Text = "Section";
+            this.Sectionlbl.Visible = false;
+            // 
+            // NSLbl
+            // 
+            this.NSLbl.AutoSize = true;
+            this.NSLbl.Location = new System.Drawing.Point(963, 28);
+            this.NSLbl.Name = "NSLbl";
+            this.NSLbl.Size = new System.Drawing.Size(22, 13);
+            this.NSLbl.TabIndex = 110;
+            this.NSLbl.Text = "NS";
+            this.NSLbl.Visible = false;
+            // 
+            // DsLbl
+            // 
+            this.DsLbl.AutoSize = true;
+            this.DsLbl.Location = new System.Drawing.Point(874, 28);
+            this.DsLbl.Name = "DsLbl";
+            this.DsLbl.Size = new System.Drawing.Size(22, 13);
+            this.DsLbl.TabIndex = 109;
+            this.DsLbl.Text = "DS";
+            this.DsLbl.Visible = false;
+            // 
+            // lblOrgunit
+            // 
+            this.lblOrgunit.AutoSize = true;
+            this.lblOrgunit.Location = new System.Drawing.Point(746, 21);
+            this.lblOrgunit.Name = "lblOrgunit";
+            this.lblOrgunit.Size = new System.Drawing.Size(35, 13);
+            this.lblOrgunit.TabIndex = 108;
+            this.lblOrgunit.Text = "label5";
+            this.lblOrgunit.Visible = false;
+            // 
+            // showBtn
+            // 
+            this.showBtn.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.showBtn.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.showBtn.Appearance.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showBtn.Appearance.Options.UseBackColor = true;
+            this.showBtn.Appearance.Options.UseFont = true;
+            this.showBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.showBtn.Image = global::BCS.Properties.Resources.Show;
+            this.showBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.showBtn.Location = new System.Drawing.Point(788, 75);
+            this.showBtn.Name = "showBtn";
+            this.showBtn.Size = new System.Drawing.Size(136, 48);
+            this.showBtn.TabIndex = 107;
+            this.showBtn.Text = "     Show               ";
+            this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
+            // 
+            // Close1Btn
+            // 
+            this.Close1Btn.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Close1Btn.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.Close1Btn.Appearance.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close1Btn.Appearance.Options.UseBackColor = true;
+            this.Close1Btn.Appearance.Options.UseFont = true;
+            this.Close1Btn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.Close1Btn.Image = global::BCS.Properties.Resources.Close;
+            this.Close1Btn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Close1Btn.Location = new System.Drawing.Point(966, 75);
+            this.Close1Btn.Name = "Close1Btn";
+            this.Close1Btn.Size = new System.Drawing.Size(136, 48);
+            this.Close1Btn.TabIndex = 106;
+            this.Close1Btn.Text = "     Close                ";
+            this.Close1Btn.Click += new System.EventHandler(this.Close1Btn_Click_1);
+            // 
+            // lbTransfer
+            // 
+            this.lbTransfer.FormattingEnabled = true;
+            this.lbTransfer.Location = new System.Drawing.Point(546, 59);
+            this.lbTransfer.Name = "lbTransfer";
+            this.lbTransfer.Size = new System.Drawing.Size(138, 95);
+            this.lbTransfer.TabIndex = 93;
+            this.lbTransfer.Click += new System.EventHandler(this.lbTransfer_Click);
+            this.lbTransfer.SelectedIndexChanged += new System.EventHandler(this.lbTransfer_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(544, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 12);
+            this.label4.TabIndex = 92;
+            this.label4.Text = "Transferred OrgUnits";
+            // 
+            // lbPrinted
+            // 
+            this.lbPrinted.FormattingEnabled = true;
+            this.lbPrinted.Location = new System.Drawing.Point(402, 59);
+            this.lbPrinted.Name = "lbPrinted";
+            this.lbPrinted.Size = new System.Drawing.Size(138, 95);
+            this.lbPrinted.TabIndex = 91;
+            this.lbPrinted.Click += new System.EventHandler(this.lbPrinted_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(400, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 12);
+            this.label3.TabIndex = 90;
+            this.label3.Text = "Printed OrgUnits";
+            // 
+            // lbIncomplete
+            // 
+            this.lbIncomplete.BackColor = System.Drawing.SystemColors.Window;
+            this.lbIncomplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIncomplete.FormattingEnabled = true;
+            this.lbIncomplete.Location = new System.Drawing.Point(258, 59);
+            this.lbIncomplete.Name = "lbIncomplete";
+            this.lbIncomplete.Size = new System.Drawing.Size(138, 95);
+            this.lbIncomplete.TabIndex = 89;
+            this.lbIncomplete.Click += new System.EventHandler(this.lbIncomplete_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(255, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 12);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Incomplete OrgUnits";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbDevConCrew);
+            this.groupBox1.Controls.Add(this.rdbDevCleanCrew);
+            this.groupBox1.Controls.Add(this.rdbDevTransCrew);
+            this.groupBox1.Controls.Add(this.rdbDevRailCrew);
+            this.groupBox1.Controls.Add(this.rdbDev);
+            this.groupBox1.Controls.Add(this.rdbXCCrew);
+            this.groupBox1.Controls.Add(this.rdbConstCrew);
+            this.groupBox1.Controls.Add(this.rdbZCrew);
+            this.groupBox1.Controls.Add(this.rdbRCrew);
+            this.groupBox1.Controls.Add(this.rdbStoping);
+            this.groupBox1.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(226, 255);
+            this.groupBox1.TabIndex = 87;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Activity";
+            // 
+            // rdbDevConCrew
+            // 
+            this.rdbDevConCrew.AutoSize = true;
+            this.rdbDevConCrew.Location = new System.Drawing.Point(12, 232);
+            this.rdbDevConCrew.Name = "rdbDevConCrew";
+            this.rdbDevConCrew.Size = new System.Drawing.Size(181, 16);
+            this.rdbDevConCrew.TabIndex = 9;
+            this.rdbDevConCrew.Text = "Dev Construction Crew";
+            this.rdbDevConCrew.UseVisualStyleBackColor = true;
+            this.rdbDevConCrew.CheckedChanged += new System.EventHandler(this.redDevConCrew_CheckedChanged);
+            // 
+            // rdbDevCleanCrew
+            // 
+            this.rdbDevCleanCrew.AutoSize = true;
+            this.rdbDevCleanCrew.Location = new System.Drawing.Point(12, 210);
+            this.rdbDevCleanCrew.Name = "rdbDevCleanCrew";
+            this.rdbDevCleanCrew.Size = new System.Drawing.Size(147, 16);
+            this.rdbDevCleanCrew.TabIndex = 8;
+            this.rdbDevCleanCrew.Text = "Dev Raise_BH Crew";
+            this.rdbDevCleanCrew.UseVisualStyleBackColor = true;
+            this.rdbDevCleanCrew.CheckedChanged += new System.EventHandler(this.rdbDevCleanCrew_CheckedChanged);
+            // 
+            // rdbDevTransCrew
+            // 
+            this.rdbDevTransCrew.AutoSize = true;
+            this.rdbDevTransCrew.Location = new System.Drawing.Point(12, 188);
+            this.rdbDevTransCrew.Name = "rdbDevTransCrew";
+            this.rdbDevTransCrew.Size = new System.Drawing.Size(158, 16);
+            this.rdbDevTransCrew.TabIndex = 7;
+            this.rdbDevTransCrew.Text = "Dev Transport Crew";
+            this.rdbDevTransCrew.UseVisualStyleBackColor = true;
+            this.rdbDevTransCrew.CheckedChanged += new System.EventHandler(this.rdbDevTransCrew_CheckedChanged);
+            // 
+            // rdbDevRailCrew
+            // 
+            this.rdbDevRailCrew.AutoSize = true;
+            this.rdbDevRailCrew.Location = new System.Drawing.Point(12, 166);
+            this.rdbDevRailCrew.Name = "rdbDevRailCrew";
+            this.rdbDevRailCrew.Size = new System.Drawing.Size(115, 16);
+            this.rdbDevRailCrew.TabIndex = 6;
+            this.rdbDevRailCrew.Text = "Dev Rail Crew";
+            this.rdbDevRailCrew.UseVisualStyleBackColor = true;
+            this.rdbDevRailCrew.Click += new System.EventHandler(this.rdbDevRailCrew_Click);
+            // 
+            // rdbDev
+            // 
+            this.rdbDev.AutoSize = true;
+            this.rdbDev.Location = new System.Drawing.Point(12, 144);
+            this.rdbDev.Name = "rdbDev";
+            this.rdbDev.Size = new System.Drawing.Size(108, 16);
+            this.rdbDev.TabIndex = 5;
+            this.rdbDev.Text = "Development";
+            this.rdbDev.UseVisualStyleBackColor = true;
+            this.rdbDev.CheckedChanged += new System.EventHandler(this.rdbDev_CheckedChanged);
+            // 
+            // rdbXCCrew
+            // 
+            this.rdbXCCrew.AutoSize = true;
+            this.rdbXCCrew.Location = new System.Drawing.Point(12, 122);
+            this.rdbXCCrew.Name = "rdbXCCrew";
+            this.rdbXCCrew.Size = new System.Drawing.Size(209, 16);
+            this.rdbXCCrew.TabIndex = 4;
+            this.rdbXCCrew.Text = "STP X/C Maintenance Crews";
+            this.rdbXCCrew.UseVisualStyleBackColor = true;
+            this.rdbXCCrew.CheckedChanged += new System.EventHandler(this.rdbXCCrew_CheckedChanged);
+            // 
+            // rdbConstCrew
+            // 
+            this.rdbConstCrew.AutoSize = true;
+            this.rdbConstCrew.Location = new System.Drawing.Point(12, 97);
+            this.rdbConstCrew.Name = "rdbConstCrew";
+            this.rdbConstCrew.Size = new System.Drawing.Size(190, 16);
+            this.rdbConstCrew.TabIndex = 3;
+            this.rdbConstCrew.Text = "STP Construction Crews";
+            this.rdbConstCrew.UseVisualStyleBackColor = true;
+            this.rdbConstCrew.CheckedChanged += new System.EventHandler(this.rdbConstCrew_CheckedChanged);
+            // 
+            // rdbZCrew
+            // 
+            this.rdbZCrew.AutoSize = true;
+            this.rdbZCrew.Location = new System.Drawing.Point(12, 72);
+            this.rdbZCrew.Name = "rdbZCrew";
+            this.rdbZCrew.Size = new System.Drawing.Size(109, 16);
+            this.rdbZCrew.TabIndex = 2;
+            this.rdbZCrew.Text = "STP Z. Crews";
+            this.rdbZCrew.UseVisualStyleBackColor = true;
+            this.rdbZCrew.CheckedChanged += new System.EventHandler(this.rdbZCrew_CheckedChanged);
+            // 
+            // rdbRCrew
+            // 
+            this.rdbRCrew.AutoSize = true;
+            this.rdbRCrew.Location = new System.Drawing.Point(12, 47);
+            this.rdbRCrew.Name = "rdbRCrew";
+            this.rdbRCrew.Size = new System.Drawing.Size(110, 16);
+            this.rdbRCrew.TabIndex = 1;
+            this.rdbRCrew.Text = "STP R. Crews";
+            this.rdbRCrew.UseVisualStyleBackColor = true;
+            // 
+            // rdbStoping
+            // 
+            this.rdbStoping.AutoSize = true;
+            this.rdbStoping.Checked = true;
+            this.rdbStoping.Location = new System.Drawing.Point(12, 22);
+            this.rdbStoping.Name = "rdbStoping";
+            this.rdbStoping.Size = new System.Drawing.Size(74, 16);
+            this.rdbStoping.TabIndex = 0;
+            this.rdbStoping.TabStop = true;
+            this.rdbStoping.Text = "Stoping";
+            this.rdbStoping.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(254, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 12);
+            this.label2.TabIndex = 85;
+            this.label2.Text = "ProdMonth";
+            // 
+            // ProdMonthTxt
+            // 
+            this.ProdMonthTxt.Location = new System.Drawing.Point(424, 9);
+            this.ProdMonthTxt.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.ProdMonthTxt.Name = "ProdMonthTxt";
+            this.ProdMonthTxt.Size = new System.Drawing.Size(18, 20);
+            this.ProdMonthTxt.TabIndex = 84;
+            this.ProdMonthTxt.Click += new System.EventHandler(this.ProdMonthTxt_Click);
+            // 
+            // ProdMonth1Txt
+            // 
+            this.ProdMonth1Txt.BackColor = System.Drawing.Color.White;
+            this.ProdMonth1Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdMonth1Txt.Location = new System.Drawing.Point(342, 9);
+            this.ProdMonth1Txt.MaxLength = 10000000;
+            this.ProdMonth1Txt.Name = "ProdMonth1Txt";
+            this.ProdMonth1Txt.ReadOnly = true;
+            this.ProdMonth1Txt.Size = new System.Drawing.Size(100, 20);
+            this.ProdMonth1Txt.TabIndex = 83;
+            this.ProdMonth1Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ProdMonth1Txt.TextChanged += new System.EventHandler(this.ProdMonth1Txt_TextChanged);
+            // 
+            // CrewGrid1
+            // 
+            this.CrewGrid1.AllowUserToAddRows = false;
+            this.CrewGrid1.AllowUserToDeleteRows = false;
+            this.CrewGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CrewGrid1.Location = new System.Drawing.Point(16, 269);
+            this.CrewGrid1.Name = "CrewGrid1";
+            this.CrewGrid1.ReadOnly = true;
+            this.CrewGrid1.Size = new System.Drawing.Size(970, 161);
+            this.CrewGrid1.TabIndex = 1;
+            // 
+            // WPGrid
+            // 
+            this.WPGrid.AllowUserToAddRows = false;
+            this.WPGrid.AllowUserToDeleteRows = false;
+            this.WPGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.WPGrid.Location = new System.Drawing.Point(12, 436);
+            this.WPGrid.Name = "WPGrid";
+            this.WPGrid.ReadOnly = true;
+            this.WPGrid.Size = new System.Drawing.Size(381, 59);
+            this.WPGrid.TabIndex = 2;
+            // 
+            // pcReport
+            // 
+            this.pcReport.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pcReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcReport.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.pcReport.Location = new System.Drawing.Point(0, 263);
+            this.pcReport.Name = "pcReport";
+            this.pcReport.Size = new System.Drawing.Size(1263, 235);
+            this.pcReport.TabIndex = 3;
+            this.pcReport.UIStyle = FastReport.Utils.UIStyle.Office2007Black;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.simpleButton1.Image = global::BCS.Properties.Resources.Arrow_Left;
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton1.Location = new System.Drawing.Point(788, 169);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(314, 48);
+            this.simpleButton1.TabIndex = 135;
+            this.simpleButton1.Text = "Transfer to ARMS Interface  ";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // frmStpCrewBonus
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1263, 498);
+            this.Controls.Add(this.pcReport);
+            this.Controls.Add(this.WPGrid);
+            this.Controls.Add(this.CrewGrid1);
+            this.Controls.Add(this.panel1);
+            this.Name = "frmStpCrewBonus";
+            this.Text = "frmCrewBonus";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmStpCrewBonus_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdMonthTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CrewGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WPGrid)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown ProdMonthTxt;
+        private System.Windows.Forms.TextBox ProdMonth1Txt;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbXCCrew;
+        private System.Windows.Forms.RadioButton rdbConstCrew;
+        private System.Windows.Forms.RadioButton rdbZCrew;
+        private System.Windows.Forms.RadioButton rdbRCrew;
+        private System.Windows.Forms.RadioButton rdbStoping;
+        private System.Windows.Forms.ListBox lbTransfer;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox lbPrinted;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox lbIncomplete;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.SimpleButton showBtn;
+        private DevExpress.XtraEditors.SimpleButton Close1Btn;
+        private System.Windows.Forms.Label lblOrgunit;
+        private System.Windows.Forms.Label NSLbl;
+        private System.Windows.Forms.Label DsLbl;
+        private System.Windows.Forms.Label Sectionlbl;
+        private System.Windows.Forms.Label AdjLbl;
+        private System.Windows.Forms.DataGridView CrewGrid1;
+        private System.Windows.Forms.DateTimePicker EndDate;
+        private System.Windows.Forms.DateTimePicker StartDate;
+        private System.Windows.Forms.DataGridView WPGrid;
+        private System.Windows.Forms.Label ReefTypelbl;
+        private System.Windows.Forms.Label AvgEmpLbl;
+        private System.Windows.Forms.Label PosShiftsLbl;
+        private System.Windows.Forms.Label IncentiveSqmLbl;
+        private System.Windows.Forms.Label TotalWPSqmLbl;
+        private System.Windows.Forms.Label AbscentBonusLbl;
+        private System.Windows.Forms.Label DrillOpBonusLbl;
+        private System.Windows.Forms.Label TeamLeaderBonusLbl;
+        private System.Windows.Forms.Label MerBonusLbl;
+        private System.Windows.Forms.Label TotalSweepsLbl;
+        private System.Windows.Forms.Label IncentiveSweepsLbl;
+        private System.Windows.Forms.Label NSLTILbl;
+        private System.Windows.Forms.Label DSLTILbl;
+        private System.Windows.Forms.Label NSFatalLbl;
+        private System.Windows.Forms.Label NSLtiSafeLbl;
+        private System.Windows.Forms.Label NSRiLbl;
+        private System.Windows.Forms.Label DSFatalLbl;
+        private System.Windows.Forms.Label DSLtiSafeLbl;
+        private System.Windows.Forms.Label DSRiLbl;
+        private FastReport.Preview.PreviewControl pcReport;
+        private System.Windows.Forms.RadioButton rdbDev;
+        private System.Windows.Forms.Label DevTypeLbl;
+        private System.Windows.Forms.RadioButton rdbDevRailCrew;
+        private System.Windows.Forms.RadioButton rdbDevTransCrew;
+        private System.Windows.Forms.RadioButton rdbDevCleanCrew;
+        private System.Windows.Forms.RadioButton rdbDevConCrew;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+    }
+}

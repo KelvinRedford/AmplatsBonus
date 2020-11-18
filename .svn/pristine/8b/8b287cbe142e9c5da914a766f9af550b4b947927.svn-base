@@ -1,0 +1,277 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.IO;
+
+namespace BCS
+{
+    public partial class frmProp : Form
+    {
+        public frmProp()
+        {
+            InitializeComponent();
+        }
+
+        public frmSysAdmin SysAdminFrm;
+
+        public frmProp(frmSysAdmin _SysAdminFrm)
+        {
+            InitializeComponent();
+            SysAdminFrm = _SysAdminFrm;
+        }
+
+        string Locked;
+        string MyID = "";
+
+        private void frmProp_Load(object sender, EventArgs e)
+        {
+            if (Text == "System Users")
+            {
+                pnlSysAdmin.Visible = true;
+                pnlSysAdmin.Dock = DockStyle.Fill;
+                
+                MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+                _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                _dbMan.SqlStatement = "select ProfileDesc from dbo.BMCS_Profile order by ProfileDesc";
+                _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+                _dbMan.ExecuteInstruction();
+
+                DataTable dt = _dbMan.ResultsDataTable;
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    cmbProfileID.Items.Add(dr["ProfileDesc"]);
+                }
+
+
+                MWDataManager.clsDataAccess _dbMan1 = new MWDataManager.clsDataAccess();
+                _dbMan1.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                _dbMan1.SqlStatement = "select * from NorthamPas.dbo.SECTION \r\n "+
+                                       "where Prodmonth = (select CurrentProductionMonth from NorthamPas.dbo.SYSSET) \r\n " +
+                                       "and Hierarchicalid = 4";
+                _dbMan1.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                _dbMan1.queryReturnType = MWDataManager.ReturnType.DataTable;
+                _dbMan1.ExecuteInstruction();
+
+                DataTable dt1 = _dbMan1.ResultsDataTable;
+
+                cmbMO.Items.Add("");
+                foreach (DataRow dr1 in dt1.Rows)
+                {
+                    cmbMO.Items.Add(dr1["SectionID"]);
+                }
+
+            }
+            else if (Text == "Profile Groups")
+            {
+                pnlSecurity.Visible = true;
+                pnlSecurity.Dock = DockStyle.Fill;
+
+
+            }
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void LogonBtn_Click(object sender, EventArgs e)
+        {
+            if (Text == "System Users")
+            {
+                if (lblEdit.Text != "Y")
+                {
+                    MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+                    _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                    _dbMan.SqlStatement = "select * from BMCS_Users " +
+                                           "where UserID = '" + txtUserName.Text + "' ";
+                    _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                    _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+                    _dbMan.ExecuteInstruction();
+
+                
+                    if (_dbMan.ResultsDataTable.Rows.Count != 0)
+                    {
+                        MessageBox.Show("The User Name already exists", "User already exists", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        txtUserName.Focus();
+                        return;
+                    }
+                }
+
+                if (txtUserName.Text == "")
+                {
+                    MessageBox.Show("Please enter a UserName", "No UserName", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    txtUserName.Focus();
+                    return;
+                }
+
+                if (txtPassword.Text == "")
+                {
+                    MessageBox.Show("Please enter a Password", "No Password", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    txtPassword.Focus();
+                    return;
+                }
+
+                if (txtConfirmPass.Text == "")
+                {
+                    MessageBox.Show("Please Confirm Password", "No Password", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    txtConfirmPass.Focus();
+                    return;
+                }
+
+                if (cmbProfileID.Text == "")
+                {
+                    MessageBox.Show("Please select a profile", "No Profile", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    cmbProfileID.DroppedDown = true;
+                    return;
+                }                
+
+                if (txtPassword.Text != txtConfirmPass.Text)
+                {
+                    MessageBox.Show("Your Password does not match your Confirm Password", "Incorrect Password", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    txtPassword.Focus();
+                    return;
+                }
+
+                if (cbxLocked.Checked == true)
+                    Locked = "Y";
+                else
+                    Locked = "N";
+
+
+                MWDataManager.clsDataAccess _dbMan1 = new MWDataManager.clsDataAccess();
+                _dbMan1.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                _dbMan1.SqlStatement = "Delete BMCS_Users where userid = '" + txtUserName.Text+ "'  insert into BMCS_Users values ( '" + txtUserName.Text + "', '" + txtPassword.Text + "', '" + txtName.Text + "', \r\n " +
+                                        " (select ProfileID from BMCS_Profile where ProfileDesc = '"+cmbProfileID.Text+"'), null, '" + String.Format("{0:yyyy-MM-dd}", ExpiryDate.Value) + "', \r\n  " +
+                                        " '" + Locked + "', '" + cmbMO.Text + "' )  ";
+                _dbMan1.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                _dbMan1.queryReturnType = MWDataManager.ReturnType.DataTable;
+                _dbMan1.ExecuteInstruction();
+
+                frmMessage MsgFrm = new frmMessage();
+                MsgFrm.Text = "Saved";
+                MsgFrm.Text = "Saved Successfully";
+                MsgFrm.Show();
+
+                SysAdminFrm.LoadUsers();
+                Close();
+                
+            }
+
+            if (Text == "Profile Groups")
+            {
+                if (txtDesc.Text == "")
+                {
+                    MessageBox.Show("Please enter a profile group", "Incorrect Profile", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    txtDesc.Focus();
+                    return;
+                }
+
+
+
+                if (lblEdit.Text != "Y")
+                {
+                    MWDataManager.clsDataAccess _dbMan2 = new MWDataManager.clsDataAccess();
+                    _dbMan2.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                    _dbMan2.SqlStatement = "select * from BMCS_Profile where profiledesc = '" + txtDesc.Text + "' ";
+                    _dbMan2.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                    _dbMan2.queryReturnType = MWDataManager.ReturnType.DataTable;
+                    _dbMan2.ExecuteInstruction();
+
+                    if (_dbMan2.ResultsDataTable.Rows.Count > 0)
+                    {
+                        MessageBox.Show("The Profile Group already exists", "Incorrect Profile", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        txtDesc.Focus();
+                        return;
+                    }
+
+                    MWDataManager.clsDataAccess _dbMan4 = new MWDataManager.clsDataAccess();
+                    _dbMan4.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                    _dbMan4.SqlStatement = "select MAX(ProfileID) + 1 NextID from BMCS_Profile ";
+                    _dbMan4.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                    _dbMan4.queryReturnType = MWDataManager.ReturnType.DataTable;
+                    _dbMan4.ExecuteInstruction();
+
+                    MyID = _dbMan4.ResultsDataTable.Rows[0][0].ToString();
+                                        
+                }
+                else
+                {
+                    MWDataManager.clsDataAccess _dbMan5 = new MWDataManager.clsDataAccess();
+                    _dbMan5.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                    _dbMan5.SqlStatement = "select ProfileID from BMCS_Profile where ProfileDesc = '"+txtDesc.Text+"' ";
+                    _dbMan5.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                    _dbMan5.queryReturnType = MWDataManager.ReturnType.DataTable;
+                    _dbMan5.ExecuteInstruction();
+
+                    MyID = _dbMan5.ResultsDataTable.Rows[0][0].ToString();
+                }
+
+
+
+                string Sys = "N";
+                string Mining = "N";
+                string Eng = "N";
+                string Att = "N";
+                string Report1 = "N";
+                string Safety = "N";
+                string Transfer = "N";                
+
+                if (cbxSysAdmin.Checked == true)
+                    Sys = "Y";
+                if (cbxMining.Checked == true)
+                    Mining = "Y";
+                if (cbxEng.Checked == true)
+                    Eng = "Y";
+                if (cbxAtt.Checked == true)
+                    Att = "Y";
+                if (cbxRep.Checked == true)
+                    Report1 = "Y";
+                if (cbxSafety.Checked == true)
+                    Safety = "Y";
+                if (cbxTrans.Checked == true)
+                    Transfer = "Y";
+
+                MWDataManager.clsDataAccess _dbMan3 = new MWDataManager.clsDataAccess();
+                _dbMan3.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                _dbMan3.SqlStatement = "Delete BMCS_Profile where ProfileDesc = '" + txtDesc.Text + "' \r\n "+ 
+                                       "insert into BMCS_Profile (ProfileDesc, SystemAdmin, StopingDailyShiftReturns, \r\n "+
+                                       "DevDailyShiftReturns, StopingCalcSheets, DevCalcSheets,  \r\n "+
+                                       "Reports, MOInput, MOCalcSheets, Eng, MOView, SweepDSR,  \r\n "+
+                                       "SweepCS, TramDSR, TramCS, SurveyMeas, EngView, TramView) \r\n " +
+                                       "values ('" + txtDesc.Text + "', \r\n " + //'" + MyID + "',
+                                       "'" + Sys + "', '" + Safety + "', 'N', '"+Mining+"', 'N', \r\n " +
+                                       "'" + Report1 + "', 'N', 'N', \r\n  " +
+                                       "'" + Eng + "', '" + Transfer + "', 'N', 'N', 'N', 'N', '" + Att + "', 'N', 'N' )  ";
+                _dbMan3.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                _dbMan3.queryReturnType = MWDataManager.ReturnType.DataTable;
+                _dbMan3.ExecuteInstruction();
+
+
+                frmMessage MsgFrm = new frmMessage();
+                MsgFrm.Text = "Saved";
+                MsgFrm.Text = "Saved Successfully";
+                MsgFrm.Show();
+
+                SysAdminFrm.LoadProfiles();
+                Close();
+            }
+
+            
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

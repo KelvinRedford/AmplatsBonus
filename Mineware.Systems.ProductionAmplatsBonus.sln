@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mineware.Systems.ProductionAmplatsBonus", "Mineware.Systems.ProductionAmplatsBonus\Mineware.Systems.ProductionAmplatsBonus.csproj", "{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8578B46C-779C-405A-9232-9179BCC8ACC8} = {8578B46C-779C-405A-9232-9179BCC8ACC8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mineware.Systems.ProductionBonusGlobal", "Mineware.Systems.ProductionBonusGlobal\Mineware.Systems.ProductionBonusGlobal.csproj", "{8578B46C-779C-405A-9232-9179BCC8ACC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}.Debug|x86.ActiveCfg = Debug|x86
+		{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}.Debug|x86.Build.0 = Debug|x86
+		{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}.Release|Any CPU.ActiveCfg = Release|x86
+		{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}.Release|x86.ActiveCfg = Release|x86
+		{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}.Release|x86.Build.0 = Release|x86
+		{8578B46C-779C-405A-9232-9179BCC8ACC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8578B46C-779C-405A-9232-9179BCC8ACC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8578B46C-779C-405A-9232-9179BCC8ACC8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8578B46C-779C-405A-9232-9179BCC8ACC8}.Debug|x86.Build.0 = Debug|Any CPU
+		{8578B46C-779C-405A-9232-9179BCC8ACC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8578B46C-779C-405A-9232-9179BCC8ACC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8578B46C-779C-405A-9232-9179BCC8ACC8}.Release|x86.ActiveCfg = Release|Any CPU
+		{8578B46C-779C-405A-9232-9179BCC8ACC8}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE2AE7A8-36B1-441C-8A6F-4D5E169DDFDF}
+	EndGlobalSection
+EndGlobal

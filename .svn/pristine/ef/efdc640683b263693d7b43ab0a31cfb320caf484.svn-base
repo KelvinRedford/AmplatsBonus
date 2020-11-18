@@ -1,0 +1,351 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+using FastReport;
+//using PAS.ReportSettings;
+using System.Net;
+using FastReport.Utils;
+using System.Diagnostics;
+using System.Net;
+using System.Net.Mail;
+
+namespace BCS
+{
+    public partial class frmMain : Form
+    {
+        public frmMain()
+        {
+            InitializeComponent();
+        }
+        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureEdit1_EditValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {   
+            SysSettings.ProdMonth = 201309;
+            btnBcs_Click(null,null);
+        }
+
+        public static Form IsBookingFormAlreadyOpen(Type FormType)
+        {
+            foreach (Form OpenForm in Application.OpenForms)
+            {
+                if (OpenForm.GetType() == FormType)
+                    return OpenForm;
+            }
+
+            return null;
+        }
+
+        private void btnStpCrewBonus_Click(object sender, EventArgs e)
+        {
+            frmStpCrewBonus RepFrm = (frmStpCrewBonus)IsBookingFormAlreadyOpen(typeof(frmStpCrewBonus));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmStpCrewBonus();
+                RepFrm.Text = "Stope Crew Bonus";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSysAdmin_Click(object sender, EventArgs e)
+        {
+            frmSysAdmin RepFrm = (frmSysAdmin)IsBookingFormAlreadyOpen(typeof(frmSysAdmin));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmSysAdmin();
+                RepFrm.Text = "System Admin";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void btnSafety_Click(object sender, EventArgs e)
+        {
+            frmSafetyNew RepFrm = (frmSafetyNew)IsBookingFormAlreadyOpen(typeof(frmSafetyNew));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmSafetyNew();
+                RepFrm.Text = "Safety";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void btnCat2Capt_Click(object sender, EventArgs e)
+        {
+            frmCat2Capt RepFrm = (frmCat2Capt)IsBookingFormAlreadyOpen(typeof(frmCat2Capt));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmCat2Capt();
+                RepFrm.Text = "Cat 2 to 8 Capture";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void ProdBtn_Paint(object sender, PaintEventArgs e)
+        {
+            Bitmap bmp = Properties.Resources.calculator_icon;
+            bmp.MakeTransparent(Color.White);
+            int x = 4;// (SafetyBtn.Width - bmp.Width) / 8;
+            int y = (btnBcs.Height - bmp.Height) / 2;
+            e.Graphics.DrawImage(bmp, x, y);
+        }
+
+        private void btnDevCrewBonus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBcs_Click(object sender, EventArgs e)
+        {            
+            pnlCalculations.Dock = DockStyle.Fill;
+            pnlCalculations.Visible = true;
+
+            pnlShiftCapture.Visible = false;
+            pnlReports.Visible = false;
+
+            btnBcs.BackColor = Color.YellowGreen;
+            btnSysset.BackColor = button5.BackColor;
+            btnReports.BackColor = button5.BackColor;
+        }
+
+        private void btnSysset_Click(object sender, EventArgs e)
+        {
+            pnlShiftCapture.Dock = DockStyle.Fill;
+            pnlShiftCapture.Visible = true;
+
+            pnlCalculations.Visible = false;
+            pnlReports.Visible = false;
+
+            btnSysset.BackColor = Color.YellowGreen;
+            btnBcs.BackColor = button5.BackColor;
+            btnReports.BackColor = button5.BackColor;
+        }
+
+        private void btnStpSBBonus_Click(object sender, EventArgs e)
+        {
+            frmSBBonus SBForm = (frmSBBonus)IsBookingFormAlreadyOpen(typeof(frmSBBonus));
+            if (SBForm == null)
+            {
+                SBForm = new frmSBBonus();
+                SBForm.Text = "Stoping Shift Boss Bonus";
+                SBForm.Show();
+            }
+            else
+            {
+                SBForm.WindowState = FormWindowState.Maximized;
+                SBForm.Select();
+            }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string MyPath = SysSettings.CurDir + @"\BonusSystem\BonusSystem.exe";
+            Process.Start(MyPath);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string MyPath = SysSettings.CurDir + @"\SystemSettings\BCS_System_Settings.exe";
+            Process.Start(MyPath);
+        }
+
+        private void btnSBShifts_Click(object sender, EventArgs e)
+        {
+            frmSBShifts RepFrm = (frmSBShifts)IsBookingFormAlreadyOpen(typeof(frmSBShifts));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmSBShifts();
+                RepFrm.Text = "Shift Boss Shift Sheets";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void btnSBCrew_Click(object sender, EventArgs e)
+        {
+            frmSBShifts RepFrm = (frmSBShifts)IsBookingFormAlreadyOpen(typeof(frmSBShifts));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmSBShifts();
+                RepFrm.Text = "Shift Boss Crew Achievements";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmSBBonus SBForm = (frmSBBonus)IsBookingFormAlreadyOpen(typeof(frmSBBonus));
+            if (SBForm == null)
+            {
+                SBForm = new frmSBBonus();
+                SBForm.Text = "Development Shift Boss Bonus";
+                SBForm.Show();
+            }
+            else
+            {
+                SBForm.WindowState = FormWindowState.Maximized;
+                SBForm.Select();
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            pnlReports.Dock = DockStyle.Fill;
+            pnlReports.Visible = true;
+
+            pnlCalculations.Visible = false;
+            pnlShiftCapture.Visible = false;
+
+            btnReports.BackColor = Color.YellowGreen;
+            btnBcs.BackColor = button5.BackColor;
+            btnSysset.BackColor = button5.BackColor;
+        }
+
+        private void btnReports_Paint(object sender, PaintEventArgs e)
+        {
+            Bitmap bmp = Properties.Resources.Report;
+            bmp.MakeTransparent(Color.White);
+            int x = 4;// (SafetyBtn.Width - bmp.Width) / 8;
+            int y = (btnBcs.Height - bmp.Height) / 2;
+            e.Graphics.DrawImage(bmp, x, y);
+        }
+
+        private void btnSysset_Paint(object sender, PaintEventArgs e)
+        {
+            Bitmap bmp = Properties.Resources.People_32;
+            bmp.MakeTransparent(Color.White);
+            int x = 4;// (SafetyBtn.Width - bmp.Width) / 8;
+            int y = (btnBcs.Height - bmp.Height) / 2;
+            e.Graphics.DrawImage(bmp, x, y);
+        }
+
+        private void btnSbMonthly_Click(object sender, EventArgs e)
+        {
+            frmSBShifts RepFrm = (frmSBShifts)IsBookingFormAlreadyOpen(typeof(frmSBShifts));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmSBShifts();
+                RepFrm.Text = "Shift Boss Incentive Summary";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void btnSbYearly_Click(object sender, EventArgs e)
+        {
+
+            frmSBShifts RepFrm = (frmSBShifts)IsBookingFormAlreadyOpen(typeof(frmSBShifts));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmSBShifts();
+                RepFrm.Text = "Yearly Summary";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+
+        }
+
+        private void btnBaseRateReport_Click(object sender, EventArgs e)
+        {
+            frmBaseRateReport RepFrm = (frmBaseRateReport)IsBookingFormAlreadyOpen(typeof(frmBaseRateReport));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmBaseRateReport();
+                RepFrm.Text = "Base Rate Calculation Report";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+       
+        
+
+        
+    }
+}

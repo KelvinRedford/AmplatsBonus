@@ -1,0 +1,406 @@
+﻿namespace BCS
+{
+    partial class frmSBBonus
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.EndDate = new System.Windows.Forms.DateTimePicker();
+            this.BeginDate = new System.Windows.Forms.DateTimePicker();
+            this.SBlbl = new System.Windows.Forms.Label();
+            this.lblOrgunit = new System.Windows.Forms.Label();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.showBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.Close1Btn = new DevExpress.XtraEditors.SimpleButton();
+            this.lbTransfer = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbPrinted = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbIncomplete = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ActivityGroup = new System.Windows.Forms.GroupBox();
+            this.rdbDev = new System.Windows.Forms.RadioButton();
+            this.rdbStoping = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ProdMonthTxt = new System.Windows.Forms.NumericUpDown();
+            this.ProdMonth1Txt = new System.Windows.Forms.TextBox();
+            this.OrgUnitGrid = new System.Windows.Forms.DataGridView();
+            this.pcReport = new FastReport.Preview.PreviewControl();
+            this.DSGrid = new System.Windows.Forms.DataGridView();
+            this.NSGrid = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            this.ActivityGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdMonthTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrgUnitGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NSGrid)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.EndDate);
+            this.panel1.Controls.Add(this.BeginDate);
+            this.panel1.Controls.Add(this.SBlbl);
+            this.panel1.Controls.Add(this.lblOrgunit);
+            this.panel1.Controls.Add(this.simpleButton1);
+            this.panel1.Controls.Add(this.showBtn);
+            this.panel1.Controls.Add(this.Close1Btn);
+            this.panel1.Controls.Add(this.lbTransfer);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lbPrinted);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lbIncomplete);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.ActivityGroup);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.ProdMonthTxt);
+            this.panel1.Controls.Add(this.ProdMonth1Txt);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1120, 179);
+            this.panel1.TabIndex = 0;
+            // 
+            // EndDate
+            // 
+            this.EndDate.Location = new System.Drawing.Point(443, 11);
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Size = new System.Drawing.Size(146, 20);
+            this.EndDate.TabIndex = 110;
+            this.EndDate.Visible = false;
+            // 
+            // BeginDate
+            // 
+            this.BeginDate.Location = new System.Drawing.Point(254, 11);
+            this.BeginDate.Name = "BeginDate";
+            this.BeginDate.Size = new System.Drawing.Size(146, 20);
+            this.BeginDate.TabIndex = 109;
+            this.BeginDate.Visible = false;
+            // 
+            // SBlbl
+            // 
+            this.SBlbl.AutoSize = true;
+            this.SBlbl.Location = new System.Drawing.Point(861, 12);
+            this.SBlbl.Name = "SBlbl";
+            this.SBlbl.Size = new System.Drawing.Size(21, 13);
+            this.SBlbl.TabIndex = 108;
+            this.SBlbl.Text = "SB";
+            this.SBlbl.Visible = false;
+            // 
+            // lblOrgunit
+            // 
+            this.lblOrgunit.AutoSize = true;
+            this.lblOrgunit.Location = new System.Drawing.Point(690, 12);
+            this.lblOrgunit.Name = "lblOrgunit";
+            this.lblOrgunit.Size = new System.Drawing.Size(57, 13);
+            this.lblOrgunit.TabIndex = 107;
+            this.lblOrgunit.Text = "LblOrgUnit";
+            this.lblOrgunit.Visible = false;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.simpleButton1.Image = global::BCS.Properties.Resources.Arrow_Left;
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.simpleButton1.Location = new System.Drawing.Point(690, 119);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(314, 48);
+            this.simpleButton1.TabIndex = 106;
+            this.simpleButton1.Text = "Transfer to ARMS Interface  ";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // showBtn
+            // 
+            this.showBtn.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.showBtn.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.showBtn.Appearance.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showBtn.Appearance.Options.UseBackColor = true;
+            this.showBtn.Appearance.Options.UseFont = true;
+            this.showBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.showBtn.Image = global::BCS.Properties.Resources.Show;
+            this.showBtn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.showBtn.Location = new System.Drawing.Point(690, 46);
+            this.showBtn.Name = "showBtn";
+            this.showBtn.Size = new System.Drawing.Size(136, 48);
+            this.showBtn.TabIndex = 105;
+            this.showBtn.Text = "     Show               ";
+            this.showBtn.Click += new System.EventHandler(this.showBtn_Click);
+            // 
+            // Close1Btn
+            // 
+            this.Close1Btn.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Close1Btn.Appearance.BackColor2 = System.Drawing.Color.WhiteSmoke;
+            this.Close1Btn.Appearance.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close1Btn.Appearance.Options.UseBackColor = true;
+            this.Close1Btn.Appearance.Options.UseFont = true;
+            this.Close1Btn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.Close1Btn.Image = global::BCS.Properties.Resources.Close;
+            this.Close1Btn.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.Close1Btn.Location = new System.Drawing.Point(868, 46);
+            this.Close1Btn.Name = "Close1Btn";
+            this.Close1Btn.Size = new System.Drawing.Size(136, 48);
+            this.Close1Btn.TabIndex = 104;
+            this.Close1Btn.Text = "     Close                ";
+            this.Close1Btn.Click += new System.EventHandler(this.Close1Btn_Click);
+            // 
+            // lbTransfer
+            // 
+            this.lbTransfer.FormattingEnabled = true;
+            this.lbTransfer.Location = new System.Drawing.Point(497, 67);
+            this.lbTransfer.Name = "lbTransfer";
+            this.lbTransfer.Size = new System.Drawing.Size(138, 95);
+            this.lbTransfer.TabIndex = 103;
+            this.lbTransfer.Click += new System.EventHandler(this.lbTransfer_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(495, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 12);
+            this.label4.TabIndex = 102;
+            this.label4.Text = "Transferred OrgUnits";
+            // 
+            // lbPrinted
+            // 
+            this.lbPrinted.FormattingEnabled = true;
+            this.lbPrinted.Location = new System.Drawing.Point(353, 67);
+            this.lbPrinted.Name = "lbPrinted";
+            this.lbPrinted.Size = new System.Drawing.Size(138, 95);
+            this.lbPrinted.TabIndex = 101;
+            this.lbPrinted.Click += new System.EventHandler(this.lbPrinted_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(351, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 12);
+            this.label3.TabIndex = 100;
+            this.label3.Text = "Printed OrgUnits";
+            // 
+            // lbIncomplete
+            // 
+            this.lbIncomplete.BackColor = System.Drawing.SystemColors.Window;
+            this.lbIncomplete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIncomplete.FormattingEnabled = true;
+            this.lbIncomplete.Location = new System.Drawing.Point(209, 67);
+            this.lbIncomplete.Name = "lbIncomplete";
+            this.lbIncomplete.Size = new System.Drawing.Size(138, 95);
+            this.lbIncomplete.TabIndex = 99;
+            this.lbIncomplete.Click += new System.EventHandler(this.lbIncomplete_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(206, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 12);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "Incomplete OrgUnits";
+            // 
+            // ActivityGroup
+            // 
+            this.ActivityGroup.Controls.Add(this.rdbDev);
+            this.ActivityGroup.Controls.Add(this.rdbStoping);
+            this.ActivityGroup.Enabled = false;
+            this.ActivityGroup.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActivityGroup.Location = new System.Drawing.Point(11, 67);
+            this.ActivityGroup.Name = "ActivityGroup";
+            this.ActivityGroup.Size = new System.Drawing.Size(139, 95);
+            this.ActivityGroup.TabIndex = 97;
+            this.ActivityGroup.TabStop = false;
+            this.ActivityGroup.Text = "Activity";
+            // 
+            // rdbDev
+            // 
+            this.rdbDev.AutoSize = true;
+            this.rdbDev.Location = new System.Drawing.Point(12, 58);
+            this.rdbDev.Name = "rdbDev";
+            this.rdbDev.Size = new System.Drawing.Size(108, 16);
+            this.rdbDev.TabIndex = 1;
+            this.rdbDev.Text = "Development";
+            this.rdbDev.UseVisualStyleBackColor = true;
+            // 
+            // rdbStoping
+            // 
+            this.rdbStoping.AutoSize = true;
+            this.rdbStoping.Checked = true;
+            this.rdbStoping.Location = new System.Drawing.Point(12, 27);
+            this.rdbStoping.Name = "rdbStoping";
+            this.rdbStoping.Size = new System.Drawing.Size(74, 16);
+            this.rdbStoping.TabIndex = 0;
+            this.rdbStoping.TabStop = true;
+            this.rdbStoping.Text = "Stoping";
+            this.rdbStoping.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Copperplate Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 12);
+            this.label2.TabIndex = 96;
+            this.label2.Text = "ProdMonth";
+            // 
+            // ProdMonthTxt
+            // 
+            this.ProdMonthTxt.Location = new System.Drawing.Point(179, 20);
+            this.ProdMonthTxt.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.ProdMonthTxt.Name = "ProdMonthTxt";
+            this.ProdMonthTxt.Size = new System.Drawing.Size(18, 20);
+            this.ProdMonthTxt.TabIndex = 95;
+            this.ProdMonthTxt.Click += new System.EventHandler(this.ProdMonthTxt_Click);
+            // 
+            // ProdMonth1Txt
+            // 
+            this.ProdMonth1Txt.BackColor = System.Drawing.Color.White;
+            this.ProdMonth1Txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdMonth1Txt.Location = new System.Drawing.Point(97, 20);
+            this.ProdMonth1Txt.MaxLength = 10000000;
+            this.ProdMonth1Txt.Name = "ProdMonth1Txt";
+            this.ProdMonth1Txt.ReadOnly = true;
+            this.ProdMonth1Txt.Size = new System.Drawing.Size(100, 20);
+            this.ProdMonth1Txt.TabIndex = 94;
+            this.ProdMonth1Txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ProdMonth1Txt.TextAlignChanged += new System.EventHandler(this.ProdMonth1Txt_TextAlignChanged);
+            this.ProdMonth1Txt.TextChanged += new System.EventHandler(this.ProdMonth1Txt_TextChanged);
+            // 
+            // OrgUnitGrid
+            // 
+            this.OrgUnitGrid.AllowUserToAddRows = false;
+            this.OrgUnitGrid.AllowUserToDeleteRows = false;
+            this.OrgUnitGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrgUnitGrid.Location = new System.Drawing.Point(12, 198);
+            this.OrgUnitGrid.Name = "OrgUnitGrid";
+            this.OrgUnitGrid.ReadOnly = true;
+            this.OrgUnitGrid.Size = new System.Drawing.Size(954, 96);
+            this.OrgUnitGrid.TabIndex = 1;
+            // 
+            // pcReport
+            // 
+            this.pcReport.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pcReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pcReport.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.pcReport.Location = new System.Drawing.Point(0, 179);
+            this.pcReport.Name = "pcReport";
+            this.pcReport.Size = new System.Drawing.Size(1120, 350);
+            this.pcReport.TabIndex = 2;
+            this.pcReport.UIStyle = FastReport.Utils.UIStyle.Office2007Black;
+            this.pcReport.Click += new System.EventHandler(this.pcReport_Click);
+            this.pcReport.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pcReport_MouseClick);
+            // 
+            // DSGrid
+            // 
+            this.DSGrid.AllowUserToAddRows = false;
+            this.DSGrid.AllowUserToDeleteRows = false;
+            this.DSGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DSGrid.Location = new System.Drawing.Point(12, 300);
+            this.DSGrid.Name = "DSGrid";
+            this.DSGrid.ReadOnly = true;
+            this.DSGrid.Size = new System.Drawing.Size(954, 96);
+            this.DSGrid.TabIndex = 3;
+            // 
+            // NSGrid
+            // 
+            this.NSGrid.AllowUserToAddRows = false;
+            this.NSGrid.AllowUserToDeleteRows = false;
+            this.NSGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NSGrid.Location = new System.Drawing.Point(12, 402);
+            this.NSGrid.Name = "NSGrid";
+            this.NSGrid.ReadOnly = true;
+            this.NSGrid.Size = new System.Drawing.Size(954, 96);
+            this.NSGrid.TabIndex = 4;
+            // 
+            // frmSBBonus
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1120, 529);
+            this.Controls.Add(this.pcReport);
+            this.Controls.Add(this.OrgUnitGrid);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.DSGrid);
+            this.Controls.Add(this.NSGrid);
+            this.Name = "frmSBBonus";
+            this.Text = "frmSBBonus";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmSBBonus_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ActivityGroup.ResumeLayout(false);
+            this.ActivityGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdMonthTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrgUnitGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NSGrid)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox lbTransfer;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListBox lbPrinted;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox lbIncomplete;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox ActivityGroup;
+        private System.Windows.Forms.RadioButton rdbDev;
+        private System.Windows.Forms.RadioButton rdbStoping;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown ProdMonthTxt;
+        private System.Windows.Forms.TextBox ProdMonth1Txt;
+        private DevExpress.XtraEditors.SimpleButton showBtn;
+        private DevExpress.XtraEditors.SimpleButton Close1Btn;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Label lblOrgunit;
+        private System.Windows.Forms.DataGridView OrgUnitGrid;
+        private System.Windows.Forms.Label SBlbl;
+        private FastReport.Preview.PreviewControl pcReport;
+        private System.Windows.Forms.DateTimePicker EndDate;
+        private System.Windows.Forms.DateTimePicker BeginDate;
+        private System.Windows.Forms.DataGridView DSGrid;
+        private System.Windows.Forms.DataGridView NSGrid;
+    }
+}

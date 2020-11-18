@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{579E1BE8-BEE9-40D8-8DF6-9B54FFEC8845}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mineware.Systems.ProductionAmplatsBonus</RootNamespace>
+    <AssemblyName>Mineware.Systems.ProductionAmplatsBonus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\MIMSBonus\Plugin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FastReport, Version=2020.4.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=2020.4.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=2020.4.4.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Mineware.Menu.Structure, Version=2020.5.1.28208, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\Mineware.Menu.Structure.dll</HintPath>
+    </Reference>
+    <Reference Include="Mineware.Plugin.Interface, Version=2020.5.1.28362, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\Mineware.Plugin.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Mineware.Systems.Components, Version=2020.5.1.28285, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\Mineware.Systems.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Mineware.Systems.Global, Version=2020.5.1.28274, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\Mineware.Systems.Global.dll</HintPath>
+    </Reference>
+    <Reference Include="Mineware.Systems.GlobalConnect, Version=2020.5.1.28155, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\Mineware.Systems.GlobalConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Mineware.Systems.GlobalExtensions, Version=2020.5.1.28280, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\Mineware.Systems.GlobalExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mineware.Systems.Printing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MIMSBonus\Bin\Mineware.Systems.Printing.dll</HintPath>
+    </Reference>
+    <Reference Include="Mineware.Systems.ProductionBonusGlobal">
+      <HintPath>..\..\..\MIMSBonus\Bin\Mineware.Systems.ProductionBonusGlobal.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsDataAccess.cs" />
+    <Compile Include="clsUserInformation.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddTramCrewcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddTramCrewcs.Designer.cs">
+      <DependentUpon>frmAddTramCrewcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionAmplatsBonus.cs" />
+    <Compile Include="ProductionAmplatsBonusRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionAmplatsBonusRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ucAuditReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAuditReports.Designer.cs">
+      <DependentUpon>ucAuditReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucBaseRateReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBaseRateReport.Designer.cs">
+      <DependentUpon>ucBaseRateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCat2Capt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCat2Capt.Designer.cs">
+      <DependentUpon>frmCat2Capt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCrewBonus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCrewBonus.Designer.cs">
+      <DependentUpon>ucCrewBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucEngBonus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucEngBonus.Designer.cs">
+      <DependentUpon>ucEngBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessage.Designer.cs">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucEngineeringParameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucEngineeringParameters.Designer.cs">
+      <DependentUpon>ucEngineeringParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucImportData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucImportData.designer.cs">
+      <DependentUpon>ucImportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMinersBonus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMinersBonus.Designer.cs">
+      <DependentUpon>ucMinersBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMonthlySummariesRep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMonthlySummariesRep.Designer.cs">
+      <DependentUpon>ucMonthlySummariesRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductionProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductionProp.Designer.cs">
+      <DependentUpon>frmProductionProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProp.Designer.cs">
+      <DependentUpon>frmProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucReports.Designer.cs">
+      <DependentUpon>ucReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSafetyNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSafetyNew.Designer.cs">
+      <DependentUpon>ucSafetyNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSBBonus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSBBonus.Designer.cs">
+      <DependentUpon>ucSBBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSBShifts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSBShifts.Designer.cs">
+      <DependentUpon>ucSBShifts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTrammingBonus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTrammingBonus.Designer.cs">
+      <DependentUpon>ucTrammingBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrammingProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrammingProp.Designer.cs">
+      <DependentUpon>frmTrammingProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalCls.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucGangMapping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGangMapping.Designer.cs">
+      <DependentUpon>ucGangMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMiningParameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMiningParameters.Designer.cs">
+      <DependentUpon>ucMiningParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProductionMinersCapture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProductionMinersCapture.Designer.cs">
+      <DependentUpon>ucProductionMinersCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSafetyCaptureNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSafetyCaptureNew.Designer.cs">
+      <DependentUpon>ucSafetyCaptureNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTrammingCapture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucTrammingCapture.Designer.cs">
+      <DependentUpon>ucTrammingCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDataExtract.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDataExtract.Designer.cs">
+      <DependentUpon>ucDataExtract.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddTramCrewcs.resx">
+      <DependentUpon>frmAddTramCrewcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionAmplatsBonusRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductionAmplatsBonusRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAuditReports.resx">
+      <DependentUpon>ucAuditReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBaseRateReport.resx">
+      <DependentUpon>ucBaseRateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCat2Capt.resx">
+      <DependentUpon>frmCat2Capt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCrewBonus.resx">
+      <DependentUpon>ucCrewBonus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucEngBonus.resx">
+      <DependentUpon>ucEngBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessage.resx">
+      <DependentUpon>frmMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucEngineeringParameters.resx">
+      <DependentUpon>ucEngineeringParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucImportData.resx">
+      <DependentUpon>ucImportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMinersBonus.resx">
+      <DependentUpon>ucMinersBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMonthlySummariesRep.resx">
+      <DependentUpon>ucMonthlySummariesRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductionProp.resx">
+      <DependentUpon>frmProductionProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProp.resx">
+      <DependentUpon>frmProp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucReports.resx">
+      <DependentUpon>ucReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSafetyNew.resx">
+      <DependentUpon>ucSafetyNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSBBonus.resx">
+      <DependentUpon>ucSBBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSBShifts.resx">
+      <DependentUpon>ucSBShifts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTrammingBonus.resx">
+      <DependentUpon>ucTrammingBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrammingProp.resx">
+      <DependentUpon>frmTrammingProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ucGangMapping.resx">
+      <DependentUpon>ucGangMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMiningParameters.resx">
+      <DependentUpon>ucMiningParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProductionMinersCapture.resx">
+      <DependentUpon>ucProductionMinersCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSafetyCaptureNew.resx">
+      <DependentUpon>ucSafetyCaptureNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucTrammingCapture.resx">
+      <DependentUpon>ucTrammingCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDataExtract.resx">
+      <DependentUpon>ucDataExtract.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinewareNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NorthamLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCS.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BCS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Immage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NorthamLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\northamLogonormall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Immage1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow-Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Taxes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BtnLoadImageResorce.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mineware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SM1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Syncromine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalendarHybridBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CircularTickGreen.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CommentsGold.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConfigBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossRed.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocumentHybridBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditBlue2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmailBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmailGold.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlagGreen.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlagOrange.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlagRed.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpGreen.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InformationBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockClosed.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockOpen.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningCircledRed.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZoomBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeesBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddBlue2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Safety.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRed.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseRed.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmployeeBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChainBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingsHybridBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DatabaseBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintBlue.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TruckBlue.svg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

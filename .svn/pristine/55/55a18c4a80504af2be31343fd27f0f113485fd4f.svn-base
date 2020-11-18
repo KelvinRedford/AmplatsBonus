@@ -1,0 +1,388 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.IO;
+
+using DevExpress.XtraNavBar;
+using System.Drawing.Drawing2D;
+using DevExpress.XtraNavBar.ViewInfo;
+using DevExpress.Utils.Drawing;
+
+namespace BCS
+{
+    public partial class frmSysAdmin : Form
+    {
+        public frmSysAdmin()
+        {
+            InitializeComponent();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadUsers();
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        public void LoadUsers()
+        {
+            lblSelection.Text = "System Users";
+
+            LoadClicked();
+
+            grid.Visible = true;
+            grid.Rows.Clear();
+            grid.RowCount = 1000;
+            grid.ColumnCount = 6;
+            int x = 0;
+
+            grid.Columns[0].HeaderText = "UserName";
+            grid.Columns[1].HeaderText = "Name";
+            grid.Columns[2].HeaderText = "Profile";
+            grid.Columns[3].HeaderText = "Expiry Date";
+            grid.Columns[4].HeaderText = "Locked";
+            grid.Columns[5].HeaderText = "MO";
+
+            grid.Columns[0].Width = 100;
+            grid.Columns[1].Width = 150;
+            grid.Columns[2].Width = 100;
+            grid.Columns[3].Width = 100;
+            grid.Columns[4].Width = 70;
+            grid.Columns[5].Width = 70;
+
+            MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+            _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+            _dbMan.SqlStatement = "select u.*, p.ProfileDesc from dbo.BMCS_Users u, BMCS_Profile p "+
+                                  "where u.ProfileID = p.ProfileID order by userid";
+            _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+            _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+            _dbMan.ExecuteInstruction();
+
+            DataTable dt = _dbMan.ResultsDataTable;
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                grid.Rows[x].Cells[0].Value = dr["UserID"].ToString();
+                grid.Rows[x].Cells[1].Value = dr["Name"].ToString();
+                grid.Rows[x].Cells[2].Value = dr["ProfileDesc"].ToString();
+                grid.Rows[x].Cells[3].Value = Convert.ToDateTime(dr["ExpiryDate"]).ToShortDateString();
+                grid.Rows[x].Cells[4].Value = dr["Locked"].ToString();
+                grid.Rows[x].Cells[5].Value = dr["MOID"].ToString();
+                x++;
+            }
+
+            grid.RowCount = x;
+            grid.Rows[0].Cells[0].Selected = true;
+            lblSelectedRow.Text = "0";
+            grid.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
+        }
+
+        public void LoadClicked()
+        {
+            grid.Visible = true;
+            AddBtn.Enabled = true;
+            EditBtn.Enabled = true;
+            DeleteBtn.Enabled = true;
+        }
+
+        public void LoadProfiles()
+        {
+            lblSelection.Text = "Profile Groups";
+
+            LoadClicked();
+
+            grid.Visible = true;
+            grid.Rows.Clear();
+            grid.RowCount = 1000;
+            grid.ColumnCount = 8;
+            int x = 0;
+
+            grid.Columns[0].HeaderText = "Profile";
+            grid.Columns[1].HeaderText = "Sys Admin";
+            grid.Columns[2].HeaderText = "Mining";
+            grid.Columns[3].HeaderText = "Eng";
+            grid.Columns[4].HeaderText = "Att. Reg.";
+            grid.Columns[5].HeaderText = "Reports";
+            grid.Columns[6].HeaderText = "Safety";
+            grid.Columns[7].HeaderText = "Transfer";
+
+            grid.Columns[0].Width = 200;
+            grid.Columns[1].Width = 70;
+            grid.Columns[2].Width = 70;
+            grid.Columns[3].Width = 70;
+            grid.Columns[4].Width = 70;
+            grid.Columns[5].Width = 70;
+            grid.Columns[6].Width = 70;
+            grid.Columns[7].Width = 70;
+
+            MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+            _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+            _dbMan.SqlStatement = "select * from dbo.BMCS_Profile";
+            _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+            _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+            _dbMan.ExecuteInstruction();
+
+            DataTable dt = _dbMan.ResultsDataTable;
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                grid.Rows[x].Cells[0].Value = dr["profiledesc"].ToString();
+                grid.Rows[x].Cells[1].Value = dr["SystemAdmin"].ToString();
+                grid.Rows[x].Cells[2].Value = dr["stopingcalcsheets"].ToString();
+                grid.Rows[x].Cells[3].Value = dr["Eng"].ToString();
+                grid.Rows[x].Cells[4].Value = dr["SurveyMeas"].ToString();
+                grid.Rows[x].Cells[5].Value = dr["Reports"].ToString();
+                grid.Rows[x].Cells[6].Value = dr["stopingdailyshiftreturns"].ToString();
+                grid.Rows[x].Cells[7].Value = dr["moview"].ToString();
+                x++;
+            }
+
+            grid.RowCount = x;
+            grid.Rows[0].Cells[0].Selected = true;
+            grid.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoadProfiles();
+        }
+
+        public static Form IsBookingFormAlreadyOpen(Type FormType)
+        {
+            foreach (Form OpenForm in Application.OpenForms)
+            {
+                if (OpenForm.GetType() == FormType)
+                    return OpenForm;
+            }
+
+            return null;
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            //PropFrm Propfrm = (PropFrm)IsPropFormAlreadyOpen(typeof(PropFrm));
+            //if (Propfrm == null)
+            //{
+            //    Propfrm = new PropFrm(this);
+            //    Propfrm.FormClosed += new FormClosedEventHandler(PropFrm_FormClosed);
+
+            frmProp RepFrm = (frmProp)IsBookingFormAlreadyOpen(typeof(frmProp));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmProp(this);
+                RepFrm.Text = lblSelection.Text;
+                RepFrm.lblEdit.Text = "N";
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            frmProp RepFrm = (frmProp)IsBookingFormAlreadyOpen(typeof(frmProp));
+            if (RepFrm == null)
+            {
+                RepFrm = new frmProp(this);
+                RepFrm.Text = lblSelection.Text;
+                RepFrm.lblEdit.Text = "Y";
+
+                if (lblSelection.Text == "System Users")
+                {
+                    if (lblSelectedRow.Text != "NONE")
+                    {
+                        RepFrm.txtUserName.Text = grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[0].Value.ToString();                        
+                        RepFrm.txtName.Text = grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[1].Value.ToString();
+                        RepFrm.cmbProfileID.Text = grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[2].Value.ToString();
+                        RepFrm.cmbMO.Text = grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[5].Value.ToString();
+                        if (grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[4].Value.ToString() == "N")
+                            RepFrm.cbxLocked.Checked = false;
+                        else
+                            RepFrm.cbxLocked.Checked = true;
+
+                        MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+                        _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                        _dbMan.SqlStatement = "select * from BMCS_Users where UserID = '" + grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[0].Value.ToString() + "' ";
+                        _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                        _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+                        _dbMan.ExecuteInstruction();
+
+                        DataTable dt = _dbMan.ResultsDataTable;
+
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            RepFrm.txtPassword.Text = dr["Password"].ToString();
+                            RepFrm.txtConfirmPass.Text = dr["Password"].ToString();
+                            RepFrm.ExpiryDate.Value = Convert.ToDateTime( Convert.ToDateTime(dr["ExpiryDate"].ToString()).ToString("yyyy MM dd") );
+                        }
+                    }
+                }
+                else if (lblSelection.Text == "Profile Groups")
+                {
+                    if (lblSelectedRow.Text != "NONE")
+                    {
+                        RepFrm.txtDesc.Text = grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[0].Value.ToString();
+                        if (grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[1].Value.ToString() == "Y")
+                            RepFrm.cbxSysAdmin.Checked = true;
+                        if (grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[2].Value.ToString() == "Y")
+                            RepFrm.cbxMining.Checked = true;
+                        if (grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[3].Value.ToString() == "Y")
+                            RepFrm.cbxEng.Checked = true;
+                        if (grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[4].Value.ToString() == "Y")
+                            RepFrm.cbxAtt.Checked = true;
+                        if (grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[5].Value.ToString() == "Y")
+                            RepFrm.cbxRep.Checked = true;
+                        if (grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[6].Value.ToString() == "Y")
+                            RepFrm.cbxSafety.Checked = true;
+                        if (grid.Rows[Convert.ToInt32(lblSelectedRow.Text)].Cells[7].Value.ToString() == "Y")
+                            RepFrm.cbxTrans.Checked = true;
+                    }
+                }
+
+                RepFrm.Show();
+            }
+            else
+            {
+                RepFrm.WindowState = FormWindowState.Maximized;
+                RepFrm.Select();
+            }
+        }
+
+        private void frmSysAdmin_Load(object sender, EventArgs e)
+        {
+            linkLabel1_LinkClicked(null, null);
+        }
+
+        private void grid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                lblSelectedRow.Text = e.RowIndex.ToString();
+            }
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (lblSelection.Text == "System Users")
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this user", "Delete User", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    MWDataManager.clsDataAccess _dbMan1 = new MWDataManager.clsDataAccess();
+                    _dbMan1.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                    _dbMan1.SqlStatement = "Delete BMCS_Users where userid = '" + grid.CurrentRow.Cells[0].Value.ToString() + "' ";
+                    _dbMan1.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                    _dbMan1.queryReturnType = MWDataManager.ReturnType.DataTable;
+                    _dbMan1.ExecuteInstruction();
+
+                    frmMessage MsgFrm = new frmMessage();
+                    MsgFrm.Text = "Deleted";
+                    MsgFrm.Text = "User Deleted Successfully";
+                    MsgFrm.Show();
+
+                    LoadUsers();
+                }                
+            }
+
+            if (lblSelection.Text == "Profile Groups")
+            {
+                MessageBox.Show("Profile Groups cannot be deleted", "Profile Groups", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+
+
+            
+        }
+
+        private void navBarControl1_CustomDrawLink_1(object sender, CustomDrawNavBarElementEventArgs e)
+        {
+            if (e.ObjectInfo.State == DevExpress.Utils.Drawing.ObjectState.Pressed)
+            {
+                // if a link is not hot tracked or pressed it is drawn in the normal way
+                if (e.ObjectInfo.State == ObjectState.Hot || e.ObjectInfo.State == ObjectState.Pressed)
+                {
+                    Rectangle rect = e.RealBounds;
+                    rect.Inflate(-1, -1);
+                    LinearGradientBrush brush;
+                    Rectangle imageRect;
+                    Rectangle textRect;
+                    StringFormat textFormat = new StringFormat();
+                    textFormat.LineAlignment = StringAlignment.Center;
+
+                    // identifying the painted link
+                    NavLinkInfoArgs linkInfo = e.ObjectInfo as NavLinkInfoArgs;
+                    if (linkInfo.Link.Group.GroupCaptionUseImage == NavBarImage.Large)
+                    {
+                        // adjusting the rectangles for the image and text and specifying the text's alignment
+                        // if a large image is displayed within a link
+                        imageRect = rect;
+                        imageRect.Inflate(-(rect.Width - 32) / 2, -2);
+                        textRect = rect;
+                        int textHeight = Convert.ToInt16(e.Graphics.MeasureString(e.Caption,
+                          e.Appearance.Font).Height);
+                        textFormat.Alignment = StringAlignment.Center;
+                    }
+                    else
+                    {
+                        // adjusting the rectangles for the image and text and specifying the text's alignment
+                        // if a small image is displayed within a link
+                        imageRect = rect;
+                        imageRect.Width = 16;
+                        imageRect.Offset(2, 2);
+                        textRect = new Rectangle(rect.Left + 23, rect.Top, rect.Width - 23, rect.Height);
+                        textFormat.Alignment = StringAlignment.Near;
+                    }
+
+                    // creating different brushes for the hot tracked and pressed states of a link
+                    if (e.ObjectInfo.State == ObjectState.Hot)
+                    {
+                        brush = new LinearGradientBrush(rect, Color.Orange, Color.PeachPuff,
+                          LinearGradientMode.Horizontal);
+                        // shifting image and text up when a link is hot tracked
+                        imageRect.Offset(0, -1);
+                        textRect.Offset(0, -1);
+                    }
+                    else
+                        brush = new LinearGradientBrush(rect, Color.YellowGreen, Color.YellowGreen,
+                          LinearGradientMode.Horizontal);
+
+                    // painting borders
+                    e.Graphics.FillRectangle(new SolidBrush(Color.PeachPuff), e.RealBounds);
+                    // painting background
+                    e.Graphics.FillRectangle(brush, rect);
+                    // painting image
+                    if (e.Image != null)
+                        e.Graphics.DrawImageUnscaled(e.Image, imageRect);
+                    // painting caption
+                    e.Graphics.DrawString(e.Caption, e.Appearance.Font, new SolidBrush(Color.Black),
+                      textRect, textFormat);
+                    // prohibiting default link painting
+                    e.Handled = true;
+                }
+
+            } 
+        }
+
+        private void navBarItem1_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            linkLabel1_LinkClicked(null,null);
+        }
+
+        private void navBarItem2_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            linkLabel2_LinkClicked(null, null);
+        }
+    }
+}

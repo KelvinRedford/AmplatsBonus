@@ -1,0 +1,138 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Configuration;
+
+namespace BCS
+{
+    public partial class frmSafety : Form
+    {
+        public frmSafety()
+        {
+            InitializeComponent();
+        }
+
+        BindingSource bs = new BindingSource();
+        BindingSource bs1 = new BindingSource();
+
+        public void LoadOrgGrid()
+        {
+            MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+            _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+            _dbMan.SqlStatement = "select Unit from NorthamPas.dbo.org order by unit ";
+            _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+            _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+            _dbMan.ExecuteInstruction();
+
+            DataTable dtOrg = _dbMan.ResultsDataTable;
+
+            bs.DataSource = dtOrg;
+
+            OrgGrid.DataSource = bs;
+
+            OrgGrid.Columns[0].Width = 140;
+
+            OrgGrid.Columns[0].SortMode = DataGridViewColumnSortMode.NotSortable;                        
+        }
+
+        private void frmSafety_Load(object sender, EventArgs e)
+        {
+            ProdMonthTxt.Text = Convert.ToString(SysSettings.ProdMonth);
+            Procedures procs = new Procedures();
+            procs.ProdMonthVis(Convert.ToInt32(ProdMonthTxt.Text));
+            ProdMonth1Txt.Text = Procedures.Prod2;
+            ProdMonth1Txt.TextAlign = HorizontalAlignment.Center;
+
+
+            LoadOrgGrid();
+
+            ShowBtn_Click(null,null);
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ProdMonthTxt_Click(object sender, EventArgs e)
+        {
+            Procedures procs = new Procedures();
+            procs.ProdMonthCalc(Convert.ToInt32(ProdMonthTxt.Text));
+            ProdMonthTxt.Text = Procedures.Prod.ToString();
+            procs.ProdMonthVis(Convert.ToInt32(ProdMonthTxt.Text));
+            ProdMonth1Txt.Text = Procedures.Prod2;
+        }
+
+        private void txtFilter_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFilter.Text == "")
+                bs.Filter = bs.Filter;// + string.Format("and [Equipment Number] LIKE '{0}%'", '%');
+            else
+                bs.Filter = string.Format(" [Unit] LIKE '{0}%'", txtFilter.Text);
+        }
+
+        private void txtRI_Click(object sender, EventArgs e)
+        {
+            txtRI.SelectAll();
+        }
+
+        private void txtLti_Click(object sender, EventArgs e)
+        {
+            txtLti.SelectAll();
+        }
+
+        private void txtFatal_Click(object sender, EventArgs e)
+        {
+            txtFatal.SelectAll();
+        }
+
+        private void ShowBtn_Click(object sender, EventArgs e)
+        {
+            //Select * from BMCS_SafetyCapture
+            //Where ProdMonth = '' order by orgunit
+
+            MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+            _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+            _dbMan.SqlStatement = "Select OrgUnit, RI, LTI, Fatal from BMCS_SafetyCapture " +
+                                  "Where ProdMonth = '"+ProdMonthTxt.Value+"' order by orgunit ";
+            _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+            _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+            _dbMan.ExecuteInstruction();
+
+            DataTable dt = _dbMan.ResultsDataTable;
+
+            bs1.DataSource = dt;
+
+            grid.DataSource = bs1;
+
+            grid.Columns[0].Width = 100;
+            grid.Columns[1].Width = 60;
+            grid.Columns[2].Width = 60;
+            grid.Columns[3].Width = 60;
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+            _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+            _dbMan.SqlStatement = "Delete BMCS_SafetyCapture Where ProdMonth = '" + ProdMonthTxt.Value + "' and OrgUnit = '" + OrgGrid.CurrentRow.Cells[0].Value.ToString() + "' " +
+                                  "Insert into BMCS_SafetyCapture values ( '" + OrgGrid.CurrentRow.Cells[0].Value.ToString() + "', '" + ProdMonthTxt.Value + "', " +
+                                  " '" + txtRI.Text + "', '" + txtLti.Text + "', '" + txtFatal.Text + "' ) ";
+            _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+            _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+            _dbMan.ExecuteInstruction();
+
+            frmMessage MsgFrm = new frmMessage();
+            MsgFrm.Text = "Saved";
+            MsgFrm.Text = "Saved Successfully";
+            MsgFrm.Show();
+
+            ShowBtn_Click(null,null);
+        }
+    }
+}

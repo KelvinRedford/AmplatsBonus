@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.IO;
+
+namespace BCS
+{
+    public partial class frmSplash : Form
+    {
+        public frmSplash()
+        {
+            InitializeComponent();  
+        }
+
+        frmMain main = new frmMain();
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmSplash_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
+
+        private void LogonBtn_Click(object sender, EventArgs e)
+        {
+            int qwerty = 111;
+
+            if (UsernameTxt.Text != "")
+            {
+                if (PasswordTxt.Text != "")
+                {
+                    MWDataManager.clsDataAccess _dbMan = new MWDataManager.clsDataAccess();
+                    _dbMan.ConnectionString = ConfigurationSettings.AppSettings["SQLConnectionStr"];
+                    _dbMan.SqlStatement = " select * from dbo.BMCS_Users where UserID = '"+UsernameTxt.Text+"' ";
+                    _dbMan.queryExecutionType = MWDataManager.ExecutionType.GeneralSQLStatement;
+                    _dbMan.queryReturnType = MWDataManager.ReturnType.DataTable;
+                    _dbMan.ExecuteInstruction();
+
+                    DataTable dt = _dbMan.ResultsDataTable;
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        if (dt.Rows[0]["Password"].ToString() == PasswordTxt.Text)
+                        {
+                            //
+                            //Do security
+                            //
+
+                            SysSettings.CurDir = Directory.GetCurrentDirectory();
+
+                            this.Hide();
+                            main.Show();
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("Password is incorrect");
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("The username does not exist");
+                        return;
+                    }
+                }
+            }
+
+
+
+        }
+
+        private void PasswordTxt_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void PasswordTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                LogonBtn_Click(null, null);
+            }
+        }
+
+        private void frmSplash_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
